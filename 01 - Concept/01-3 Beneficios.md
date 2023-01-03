@@ -2,7 +2,7 @@
 Benefícios
 ----------
 
-O provisionamento de infraestrutura sempre foi um processo manual, caro e demorado. Agora, o gerenciamento de infraestrutura migrou do hardware físico em datacenters (ainda que eles ainda sejam um componente da sua organização) para [virtualização](/pt-br/topics/virtualization/what-is-virtualization), [containers](/pt-br/topics/containers/whats-a-linux-container) e [cloud computing](/pt-br/topics/cloud). 
+O provisionamento de infraestrutura sempre foi um processo manual, caro e demorado. Agora, o gerenciamento de infraestrutura migrou do hardware físico em datacenters (ainda que eles ainda sejam um componente da sua organização) para [virtualização](https://www.redhat.com/pt-br/topics/virtualization/what-is-virtualization), [containers](https://www.redhat.com/pt-br/topics/containers/whats-a-linux-container) e [cloud computing](https://www.redhat.com/pt-br/topics/cloud). 
 
 Com a cloud computing, o número de componentes de infraestrutura aumentou, mais aplicações são colocadas em produção diariamente e as infraestruturas precisam ser flexíveis para as frequentes alterações, escalas e desativações. Hoje em dia, sem a implementação de uma prática de IaC, fica cada vez mais difícil gerenciar a escala da infraestrutura.
 
