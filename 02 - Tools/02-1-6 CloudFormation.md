@@ -12,3 +12,5 @@ O AWS **CloudFormation** é um serviço que fornece aos desenvolvedores e empres
 *   Permite integração com outros frameworks, entre eles o [**Chef**]("02-1-1 Chef.md"), [**Puppet**]("02-1-2 Puppet.md") e [**Terraform**]("02-1-5 Terraform.md")
 
 O AWS CloudFormation é um mecanismo de provisionamento conveniente para uma grande variedade de recursos da AWS e de terceiros. Ele atende às necessidades de infraestrutura de muitos tipos diferentes de aplicações, como aplicações corporativas existentes, aplicações herdadas, aplicações criadas usando uma série de recursos da AWS e soluções baseadas em contêineres (incluindo as criadas usando o [**AWS Elastic Beanstalk**](https://aws.amazon.com/pt/elasticbeanstalk/)).
+
+_fonte:_ _https://aws.amazon.com/pt/cloudformation/_
