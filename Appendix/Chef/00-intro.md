@@ -92,5 +92,6 @@ Este tutorial do Chef estará incompleto se eu não incluir os principais benef�
 Espero que tenham gostado deste tutorial do Chef até agora, chega de posts teóricos! vamos nos divertir com as mãos na massa.
 
 _fonte_: _https://www.edureka.co/blog/chef-tutorial/_
+_doc_: _https://docs.chef.io/_ 
 
 [Passo 1](01-steps.md)
