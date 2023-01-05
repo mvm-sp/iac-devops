@@ -209,4 +209,4 @@ Espero que você tenha conseguido me acompanhar durante o processo de instalaç�
 
 _fonte_: _https://www.edureka.co/blog/install-chef/_
 
-[Introduçao](00-intro.md)
+[Tutorial](00-intro.md)
