@@ -1,6 +1,6 @@
 **Etapa 2:** Crie uma **_Recipe_** na Workstations
 
-Vamos começar criando uma **_Recipe_** na Workstations e testá-la localmente para garantir que está funcionando. Crie uma pasta chamada chef-repo. Podemos criar nossas **_Recipe_**s dentro desta pasta.
+Vamos começar criando uma **_Recipe_** na Workstations e testá-la localmente para garantir que está funcionando. Crie uma pasta chamada chef-repo. Podemos criar nossas  _**Recipes**_ dentro desta pasta.
 
 **Execute isto:**
 
@@ -46,7 +46,7 @@ Agora vou usar esta **_Recipe_** para verificar se está funcionando.
 
 1
 
-`chef-apply` `edureka.rb`
+`chef-apply edureka.rb`
 
 ![ Aplicar **_Recipe_** Motd - Tutorial do Chef](images/chef-02-03.png)
 

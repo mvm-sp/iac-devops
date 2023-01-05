@@ -1,6 +1,6 @@
 **Etapa 5:** Crie um arquivo de modelo.
 
-Anteriormente, criei um arquivo com alguns conteúdos, mas que não cabem nas minhas **_Recipe_**s e estruturas do **_Cookbook_**. Então, vamos ver como podemos criar um modelo para a página index.html.
+Anteriormente, criei um arquivo com alguns conteúdos, mas que não cabem nas minhas  _**Recipes**_ e estruturas do **_Cookbook_**. Então, vamos ver como podemos criar um modelo para a página index.html.
 
 **Execute** **isto:**
 

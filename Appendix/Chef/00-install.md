@@ -110,7 +110,7 @@ Existe Tar ball baixado para o Apache Cookbook. Agora, vou extrair o conteúdo d
 
 ![Untar Apache Package - Install Chef](images/chef-00-13.png)
 
-Todos os arquivos necessários são criados automaticamente neste **_Cookbook_**. Não há necessidade de fazer nenhuma modificação. Vamos verificar a descrição da **_Recipe_** dentro da minha pasta de **_Recipe_**s.
+Todos os arquivos necessários são criados automaticamente neste **_Cookbook_**. Não há necessidade de fazer nenhuma modificação. Vamos verificar a descrição da **_Recipe_** dentro da minha pasta de  _**Recipes**_.
 
 **Execute isto:**
 
@@ -166,7 +166,7 @@ Adicionarei meu Chef Node ao Server executando o comando Knife Bootstrap no qual
 
 **Execute isto:**
 
->`knife bootstrap 192.168.56.102 --ssh-root do usuário --ssh-senha edureka -- node-name chefNode`
+>`knife bootstrap 192.168.56.102 --ssh-root do usuário --ssh-password edureka --node-name chefNode`
 
 ![chef-node-bootstrap-1-chef-tutorial-edureka](images/chef-00-18.png)
 
@@ -176,7 +176,7 @@ Este comando também inicializará a instalação do Chef-Client no Chef Node. V
 
 **Execute isto:**
 
->`Knife node` `list`
+>`Knife node list`
 
 ![Lista de **_Nodes_** Chef - Instalar Chef](images/chef-00-20.png)
 
@@ -191,7 +191,7 @@ Vamos ver como podemos adicionar um Cookbook ao Node e gerenciar sua lista de ex
 
 ![Editar Lista de Execução - Instalar Chef](images/chef-00-22.png)
 
-Nas **_Recipe_**s Disponíveis,  você pode ver nossa **_Recipe_** learn\_chef\_httpd, você pode arrastá-la dos pacotes disponíveis para a Lista de Execuções atual e salvar a lista de Execuções.
+Nas **_Recipes_** Disponíveis,  você pode ver nossa **_Recipe_** learn\_chef\_httpd, você pode arrastá-la dos pacotes disponíveis para a Lista de Execuções atual e salvar a lista de Execuções.
 
 ![Editar Lista de Execução - Instalar Chef](images/chef-00-23.png)
 

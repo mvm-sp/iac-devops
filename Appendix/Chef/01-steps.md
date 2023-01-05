@@ -1,4 +1,4 @@
-Os **_Nodes_** usam o Chef-Client para solicitar ao Chef Server detalhes de configuração, como **_Recipe_**s, modelos e distribuições de arquivos. O Chef-Client então faz o máximo de trabalho de configuração possível nos próprios Nodes (e não no Chef Server). Cada Node tem um software Chef Client instalado, que irá puxar para baixo a configuração do Chef Server central aplicável a esse Node. Essa abordagem escalável distribui o esforço de configuração por toda a organização.
+Os **_Nodes_** usam o Chef-Client para solicitar ao Chef Server detalhes de configuração, como  _**Recipes**_, modelos e distribuições de arquivos. O Chef-Client então faz o máximo de trabalho de configuração possível nos próprios Nodes (e não no Chef Server). Cada Node tem um software Chef Client instalado, que irá puxar para baixo a configuração do Chef Server central aplicável a esse Node. Essa abordagem escalável distribui o esforço de configuração por toda a organização.
 
 **Tutorial do Chef – **_Nodes_** do Chef**
 

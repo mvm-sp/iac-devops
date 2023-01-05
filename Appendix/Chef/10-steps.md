@@ -4,7 +4,7 @@ Vamos ver como podemos adicionar um Cookbook ao Node e gerenciar sua lista de ex
 
 ![Editar Lista de Execução - Tutorial do Chef](images/chef-10-01.png)
 
-Nas **_Recipe_**s Disponíveis,  você pode ver nossa **_Recipe_** learn\_chef\_httpd, você pode arrastá-la dos pacotes disponíveis para a Lista de Execuções atual e salvar a lista de Execuções.
+Nas  _**Recipes**_ Disponíveis,  você pode ver nossa **_Recipe_** learn\_chef\_httpd, você pode arrastá-la dos pacotes disponíveis para a Lista de Execuções atual e salvar a lista de Execuções.
 
 ![Run List - Chef Tutorial](images/chef-10-02.png)
 

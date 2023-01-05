@@ -58,7 +58,7 @@ Existe Tar ball baixado para o Apache Cookbook. Agora, precisamos extrair o cont
 
 ![Apache Package - Chef Tutorial](images/chef-07-06.png)
 
-Todos os arquivos necessários são criados automaticamente neste **_Cookbook_**. Não há necessidade de fazer nenhuma modificação. Vamos verificar a descrição da **_Recipe_** dentro da minha pasta de **_Recipe_**s.
+Todos os arquivos necessários são criados automaticamente neste **_Cookbook_**. Não há necessidade de fazer nenhuma modificação. Vamos verificar a descrição da **_Recipe_** dentro da minha pasta de  _**Recipes**_.
 
 **Execute t****h****is****:**
 

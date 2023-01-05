@@ -1,6 +1,6 @@
 **Etapa 6:** Crie uma **_Recipe_** com este template.
 
-Vá para o diretório **_Recipe_**s.
+Vá para o diretório  _**Recipes**_.
 
 **Execute isto:**
 
@@ -58,7 +58,7 @@ Agora vou voltar para minha pasta chef-repo e executar/testar minha **_Recipe_**
 
 `cd /root/chef-repo`
 
-`chef-client` `--local-mode` `--runlist` `'**_recipe_**[httpd_deploy]'`
+`chef-client --local-mode --runlist '**_recipe_**[httpd_deploy]'`
 
 ![Aplicar **_Recipe_** do Chef - Tutorial do Chef](images/chef-06-02.png)
 

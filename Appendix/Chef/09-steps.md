@@ -18,7 +18,7 @@ Adicionarei meu Chef Node ao Server executando o comando Knife Bootstrap no qual
 
 1
 
-`knife bootstrap` `192.168.56.102` `--ssh-root do usuário` `--ssh-password edureka -- ``node-name chefNode`
+`knife bootstrap 192.168.56.102 --ssh-root do usuário --ssh-password edureka -- ``node-name chefNode`
 
 ![chef-node-bootstrap-1-chef-tutorial-edureka](images/chef-09-02.png)
 
@@ -32,7 +32,7 @@ Este comando também inicializará a instalação do Chef-Client no Chef Node. V
 
 1
 
-`knife` `**_node_** list`
+`knife **_node_** list`
 
 ![Lista de **_Nodes_** do Chef - Tutorial do Chef](images/chef-09-04.png)
 
