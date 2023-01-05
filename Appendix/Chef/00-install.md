@@ -86,7 +86,7 @@ Agora mova este kit inicial para o diretório do **_Cookbook_** no diretório ch
 
 **Execute isto:**
 
->`mv starter /root/chef-repo/**_Cookbooks_**`
+>`mv starter /root/chef-repo/cookbooks`
 
 **3\. Faça o download de um **_Cookbook_** do Chef Supermarket na Workstations**
 -------------------------------------------------- --------------
@@ -131,9 +131,9 @@ Para carregar o Apache Cookbook que baixei, primeiro mova este arquivo learn\_ch
 **Execute isto:**
 
 
->`mv /root/chef-repo/learn_chef_httpd /root/chef-repo/**_Cookbooks_** `
+>`mv /root/chef-repo/learn_chef_httpd /root/chef-repo/cookbooks`
 
->`cd /root/chef-repo/**_Cookbooks_**`
+>`cd /root/chef-repo/cookbooks`
 
 Agora neste diretório, execute o comando abaixo para carregar o Apache Cookbook:
 
@@ -166,7 +166,7 @@ Adicionarei meu Chef Node ao Server executando o comando Knife Bootstrap no qual
 
 **Execute isto:**
 
->`knife bootstrap 192.168.56.102 --ssh-root do usuário --ssh-senha edureka -- **_node_**-name chefNode`
+>`knife bootstrap 192.168.56.102 --ssh-root do usuário --ssh-senha edureka -- node-name chefNode`
 
 ![chef-node-bootstrap-1-chef-tutorial-edureka](images/chef-00-18.png)
 
