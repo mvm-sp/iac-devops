@@ -10,7 +10,7 @@ Além destas ferramentas de virtualização, na administração de sistemas pode
 Ferramentas
 -----------
 
-As ferramentas de gerenciamento de configuração e automação do servidor em geral podem ser usadas para alcançar a IaC. Há também soluções específicas para IaC. 
+As ferramentas de gerenciamento de configuração e automação do Server em geral podem ser usadas para alcançar a IaC. Há também soluções específicas para IaC. 
 
 #### Estas são algumas escolhas bastante conhecidas:
 
@@ -34,12 +34,12 @@ As ferramentas usadas para Configuration Management (CM) são ótimas para confi
 Configuration Management
 ------------------------
 
-Geralmente, Ansible, Puppet, SaltStack e Chef são considerados ferramentas de gerenciamento de configuração (CM) e foram criadas para instalar e gerenciar software em instâncias de servidor existentes (por exemplo, instalação de pacotes, inicialização de serviços, instalação de scripts ou arquivos de configuração no instância). Eles fazem o trabalho pesado de fazer com que uma ou mais instâncias desempenhem suas funções sem que o usuário precise especificar os comandos exatos. Nenhuma configuração manual ou scripts ad hoc são necessários.
+Geralmente, Ansible, Puppet, SaltStack e Chef são considerados ferramentas de gerenciamento de configuração (CM) e foram criadas para instalar e gerenciar software em instâncias de Server existentes (por exemplo, instalação de pacotes, inicialização de serviços, instalação de scripts ou arquivos de configuração no instância). Eles fazem o trabalho pesado de fazer com que uma ou mais instâncias desempenhem suas funções sem que o usuário precise especificar os comandos exatos. Nenhuma configuração manual ou scripts ad hoc são necessários.
 
 Configuration orchestration
 ---------------------------
 
-Ferramentas como o Terraform e CloudFormation são consideradas orquestradores. Eles são projetados para provisionar as próprias instâncias do servidor, deixando o trabalho de configuração desses servidores para outras ferramentas. A orquestração atende ao requisito de provisionar ambientes em um nível mais alto do que o gerenciamento de configuração. O foco aqui é coordenar a configuração em ambientes e clusters complexos.
+Ferramentas como o Terraform e CloudFormation são consideradas orquestradores. Eles são projetados para provisionar as próprias instâncias do Server, deixando o trabalho de configuração desses Serveres para outras ferramentas. A orquestração atende ao requisito de provisionar ambientes em um nível mais alto do que o gerenciamento de configuração. O foco aqui é coordenar a configuração em ambientes e clusters complexos.
 
 
 ![IaC toos -  compare tools](images/compare-tools.png)

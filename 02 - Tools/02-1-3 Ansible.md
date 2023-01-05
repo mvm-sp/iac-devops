@@ -20,7 +20,7 @@ Gosto muito de utilizar o ansible para algumas finalidades como parametrizar min
 
 Um dos pontos mais positivos do ansible é sua curva de aprendizado, facilmente após estudar o ansible por cerca de 4 horas já é possível começar a utilizar ele em sua infraestrutura para pequenas tarefas e tomar proveito de todo o seu poder.
 
-Não gosto de utilizar o ansible para garantir a configuração de um parque de máquinas, por exemplo, porque o ansible não garante (por si só) que a configuração estará ativa em todas as máquinas. Porém podemos utilizar ferramentas de servidor como o **Ansible Tower** (ferramenta proprietária da Red Hat e paga) ou o **Ansible AWX** (projeto open source alternativo ao Tower) para potencializar sua utilização.
+Não gosto de utilizar o ansible para garantir a configuração de um parque de máquinas, por exemplo, porque o ansible não garante (por si só) que a configuração estará ativa em todas as máquinas. Porém podemos utilizar ferramentas de Server como o **Ansible Tower** (ferramenta proprietária da Red Hat e paga) ou o **Ansible AWX** (projeto open source alternativo ao Tower) para potencializar sua utilização.
 
 Outra maneira que eu gosto de utilizar o ansible é somado a outras ferramentas principalmente com o **Terraform** (ainda vamos falar sobre isto.
 

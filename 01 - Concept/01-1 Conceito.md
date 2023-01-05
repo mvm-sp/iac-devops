@@ -8,7 +8,7 @@ Nesta abordagem, arquivos de configuração que incluem as especificações da s
 
 O controle de versão é uma parte importante da IaC. Os arquivos de configuração devem pertencer à fonte como qualquer outro código-fonte de software. Ao implantar a infraestrutura como código, também é possível separá-la em módulos, que podem ser combinados de diferentes maneiras por meio da automação.
 
-Ao automatizar o [provisionamento da infraestrutura](https://www.redhat.com/pt-br/topics/automation/what-is-provisioning) com a IaC, os desenvolvedores não precisam provisionar e gerenciar manualmente servidores, sistemas operacionais, armazenamento e outros componentes de infraestrutura sempre que criam ou implantam uma aplicação.
+Ao automatizar o [provisionamento da infraestrutura](https://www.redhat.com/pt-br/topics/automation/what-is-provisioning) com a IaC, os desenvolvedores não precisam provisionar e gerenciar manualmente Serveres, sistemas operacionais, armazenamento e outros componentes de infraestrutura sempre que criam ou implantam uma aplicação.
 
 A codificação da infraestrutura oferece um template de provisionamento para você seguir. Ainda que esse processo possa ser feito manualmente, há ferramentas de automação, como o [Red Hat® Ansible® Automation Platform](https://www.redhat.com/pt-br/technologies/management/ansible), capazes de cuidar disso para você. 
 
