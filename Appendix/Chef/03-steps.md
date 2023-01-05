@@ -46,7 +46,7 @@ Agora vou aplicar essas configurações executando o comando abaixo:
 
 1
 
-`chef``-``apply` `edureka.rb`
+`chef-apply` `edureka.rb`
 
 ![Apply httpd Recipe - Chef Tutorial](images/chef-03-02.png)
 

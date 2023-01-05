@@ -8,9 +8,9 @@ Vamos começar criando uma **_Recipe_** na Workstations e testá-la localmente p
 
 2
 
-`mkdir chef``-``repo`
+`mkdir chef-repo`
 
-`cd chef``-``repo`
+`cd chef-repo`
 
 ![chef-repo - Chef Tutorial](images/chef-02-01.png)
 
@@ -46,7 +46,7 @@ Agora vou usar esta **_Recipe_** para verificar se está funcionando.
 
 1
 
-`chef``-``apply` `edureka.rb`
+`chef-apply` `edureka.rb`
 
 ![ Aplicar **_Recipe_** Motd - Tutorial do Chef](images/chef-02-03.png)
 

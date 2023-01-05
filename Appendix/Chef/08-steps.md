@@ -6,7 +6,7 @@ Para carregar o Apache Cookbook que baixei, primeiro mova este arquivo learn\_ch
 
 1
 
-`mv` `/``root``/``chef``-``repo``/``learn_chef_httpd` `/``root``/``chef``-``repo``/``**_cookbooks_** `
+`mv /root/chef-repo/learn_chef_httpd /root/chef-repo/**_cookbooks_** `
 
 Agora vá para este diretório de **_Cookbooks_**.
 

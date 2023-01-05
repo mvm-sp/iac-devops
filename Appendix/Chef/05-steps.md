@@ -20,7 +20,7 @@ Vá para o diretório padrão
 
 1
 
-`cd` `/``root``/``chef``-``repo``/``cookbook``/``httpd_deploy``/``templates``/``default`
+`cd /root/chef-repo/cookbook/httpd_deploy/templates/default`
 
 Aqui, edite o modelo index.html.erb usando qualquer editor com o qual você se sinta confortável. Vou usar o editor vim.
 

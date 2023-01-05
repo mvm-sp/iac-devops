@@ -6,7 +6,7 @@ Vá para o diretório **_Recipe_**s.
 
 1
 
-`cd` `/``root``/``chef``-``repo``/``cookbooks``/``httpd_deploy``/``recipes`
+`cd /root/chef-repo/cookbooks/httpd_deploy/recipes`
 
 Agora edite o arquivo default.rb usando qualquer editor que desejar. Vou usar o editor vim.
 
@@ -56,9 +56,9 @@ Agora vou voltar para minha pasta chef-repo e executar/testar minha **_Recipe_**
 
 2
 
-`cd` `/``root``/``chef``-``repo`
+`cd /root/chef-repo`
 
-`chef``-``client` `-``-``local``-``mode` `-``-``runlist` `'**_recipe_**[httpd_deploy]'`
+`chef-client` `--local-mode` `--runlist` `'**_recipe_**[httpd_deploy]'`
 
 ![Aplicar **_Recipe_** do Chef - Tutorial do Chef](images/chef-06-02.png)
 

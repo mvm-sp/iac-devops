@@ -26,7 +26,7 @@ Mova este arquivo para seu diretório raiz. Agora descompacte este arquivo zip u
 
 1
 
-`unzip chef``-``starter.``zip`
+`unzip chef-starter.zip`
 
 ![Unzip Chef Starter kit - Chef Tutorial](images/chef-07-05.png)
 
@@ -36,7 +36,7 @@ Agora mova este kit inicial para o diretório do **_Cookbook_** no diretório ch
 
 1
 
-`mv starter` `/``root``/``chef``-``repo``/``**_cookbook_**`
+`mv starter /root/chef-repo/**_cookbook_**`
 
 Os **_Cookbooks_** do Chef estão disponíveis no Cookbook Super Market, podemos ir ao Chef SuperMarket. Baixe os **_Cookbooks_** necessários em _[**supermarket.chef.io**](http://supermarket.chef.io)_. Estou baixando um dos **_Cookbooks_** para instalar o Apache de lá.
 
@@ -46,7 +46,7 @@ Os **_Cookbooks_** do Chef estão disponíveis no Cookbook Super Market, podemos
 
 2
 
-`cd chef``-``repo`
+`cd chef-repo`
 
 `knife **_cookbook_** site download learn_chef_httpd`
 
@@ -54,7 +54,7 @@ Existe Tar ball baixado para o Apache Cookbook. Agora, precisamos extrair o cont
 
 1
 
-`tar` `-``xvf learn_chef_httpd``-``0.2``.``0.tar``.gz`
+`tar -xvf learn_chef_httpd-0.2.0.tar.gz`
 
 ![Apache Package - Chef Tutorial](images/chef-07-06.png)
 
@@ -66,7 +66,7 @@ Todos os arquivos necessários são criados automaticamente neste **_Cookbook_**
 
 2
 
-`cd` `/``root``/``chef``-``repo``/``learn_chef_httpd``/``recipes`
+`cd /root/chef-repo/learn_chef_httpd/recipes`
 
 `cat default.rb`
 

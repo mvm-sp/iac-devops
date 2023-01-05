@@ -37,9 +37,8 @@ Vá para o terminal da Workstations e baixe o Chef DK usando o comando wget e co
 
 **Execute este comando:**
 
-1
 
-`wget https:``/``/``packages.chef.io``/``stable``/``el``/``6``/``chefdk``-``1.0``. ``3``-``1.el6``.x86_64.rpm`
+>`wget https://packages.chef.io/stable/el/6/chefdk-1.0.3-1.el6.x86_64.rpm`
 
 ![Baixe o Chef DK - Instale o Chef](images/chef-00-05.png)
 
@@ -47,9 +46,8 @@ O pacote agora está baixado. Agora vou instalar este pacote usando rpm.
 
 **Execute isto:**
 
-1
 
-`rpm` `-``ivh chefdk``-``1.0``.``3``-``1.el6``.x86_64.rpm`
+>`rpm -ivh chefdk-1.0.3-1.el6.x86_64.rpm`
 
 ![Instalar Chef DK - Instalar Chef](images/chef-00-06.png)
 
@@ -80,9 +78,7 @@ Mova este arquivo para seu diretório raiz. Agora descompacte este arquivo usand
 
 **Execute isto:**
 
-1
-
-`unzip chef``-``starter.``zip`
+>`unzip chef-starter.zip`
 
 ![Unzip Chef Starter kit - Install Chef](images/chef-00-11.png)
 
@@ -90,9 +86,7 @@ Agora mova este kit inicial para o diretório do **_Cookbook_** no diretório ch
 
 **Execute isto:**
 
-1
-
-`mv starter` `/``root``/``chef``-``repo``/``**_Cookbooks_**`
+>`mv starter /root/chef-repo/**_Cookbooks_**`
 
 **3\. Faça o download de um **_Cookbook_** do Chef Supermarket na Workstations**
 -------------------------------------------------- --------------
@@ -101,13 +95,10 @@ Os **_Cookbooks_** do Chef estão disponíveis no Supermercado Cookbook, podemos
 
 **Execute isto:**
 
-1
 
-2
+>`cd chef-repo`
 
-`cd chef``-``repo`
-
-`knife cookbook site download learn_chef_httpd`
+>`knife cookbook site download learn_chef_httpd`
 
 ![Pacote Apache - Install Chef](images/chef-00-12.png)
 
@@ -115,9 +106,7 @@ Existe Tar ball baixado para o Apache Cookbook. Agora, vou extrair o conteúdo d
 
 **Execute isto:**
 
-1
-
-`tar` `-``xvf learn_chef_httpd``-``0.2``.``0.tar``.gz`
+>`tar -xvf learn_chef_httpd-0.2.0.tar.gz`
 
 ![Untar Apache Package - Install Chef](images/chef-00-13.png)
 
@@ -125,13 +114,10 @@ Todos os arquivos necessários são criados automaticamente neste **_Cookbook_**
 
 **Execute isto:**
 
-1
 
-2
+>`cd /root/chef-repo/learn_chef_httpd/recipes`
 
-`cd` `/``root``/``chef``-``repo``/``learn_chef_httpd``/``recipes`
-
-`cat default.rb`
+>`cat default.rb`
 
 ![Conteúdo do **_Cookbook_** - Instalar Chef](images/chef-00-14.png)
 
@@ -144,21 +130,16 @@ Para carregar o Apache Cookbook que baixei, primeiro mova este arquivo learn\_ch
 
 **Execute isto:**
 
-1
 
-2
+>`mv /root/chef-repo/learn_chef_httpd /root/chef-repo/**_Cookbooks_** `
 
-`mv` `/``root``/``chef``-``repo``/``learn_chef_httpd` `/``root``/``chef``-``repo``/``**_Cookbooks_** `
-
-`cd` `/``root``/``chef``-``repo``/``**_Cookbooks_**`
+>`cd /root/chef-repo/**_Cookbooks_**`
 
 Agora neste diretório, execute o comando abaixo para carregar o Apache Cookbook:
 
 **Execute isto:**
 
-1
-
-`knife cookbook upload learn_chef_httpd`
+>`knife cookbook upload learn_chef_httpd`
 
 ![Upload Apache Cookbook - Install Chef](images/chef-00-15.png)
 
@@ -177,9 +158,7 @@ Eu só preciso do endereço IP do meu Node para isso vou executar o comando abai
 
 **Execute isto:**
 
-1
-
-`ifconfig`
+>`ifconfig`
 
 ![Endereço IP do Chef Node - Install Chef](images/chef-00-17.png)
 
@@ -187,9 +166,7 @@ Adicionarei meu Chef Node ao Server executando o comando Knife Bootstrap no qual
 
 **Execute isto:**
 
-1
-
-`knife bootstrap` `192.168``.``56.102` `-``-``ssh``-``root do usuário` `-``-``ssh``-``senha edureka` `-``- ``**_Node_**``-``nome chefNode`
+>`knife bootstrap 192.168.56.102 --ssh-root do usuário --ssh-senha edureka -- **_node_**-name chefNode`
 
 ![chef-node-bootstrap-1-chef-tutorial-edureka](images/chef-00-18.png)
 
@@ -199,9 +176,7 @@ Este comando também inicializará a instalação do Chef-Client no Chef Node. V
 
 **Execute isto:**
 
-1
-
-`Knife node` `list`
+>`Knife node` `list`
 
 ![Lista de **_Nodes_** Chef - Instalar Chef](images/chef-00-20.png)
 
@@ -224,9 +199,7 @@ Agora faça o login no seu Node e apenas execute o chef-client para executar a l
 
 **Execute isto:**
 
-1
-
-`chef``-``client`
+>`chef-client`
 
 ![Execute Chef-Client - Install Chef](images/chef-00-24.png)
 
