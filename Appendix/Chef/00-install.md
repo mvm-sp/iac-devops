@@ -176,7 +176,7 @@ Este comando também inicializará a instalação do Chef-Client no Chef Node. V
 
 **Execute isto:**
 
->`Knife node list`
+>`knife node list`
 
 ![Lista de **_Nodes_** Chef - Instalar Chef](images/chef-00-20.png)
 

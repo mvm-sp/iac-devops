@@ -4,7 +4,7 @@ Para fins de demonstração, usarei uma máquina CentOS como Chef Node. Pode hav
 
 Eu só preciso do endereço IP do meu Node para isso vou executar o comando abaixo na minha máquina Node.
 
-**Executar****u****t****e** **t****h****é:**
+**Execute isto:**
 
 >`ifconfig`
 
@@ -12,9 +12,9 @@ Eu só preciso do endereço IP do meu Node para isso vou executar o comando abai
 
 Adicionarei meu Chef Node ao Server executando o comando Knife Bootstrap no qual especificarei o endereço IP do The Chef Node e seu nome. Execute o comando mostrado abaixo:
 
-** Executar **** t **** é: **
+**Execute isto:**
 
->`knife bootstrap 192.168.56.102 --ssh-root do usuário --ssh-password edureka -- ``node-name chefNode`
+>`knife bootstrap 192.168.56.102 --ssh-user root --ssh-password edureka --node-name chefNode`
 
 ![chef-node-bootstrap-1-chef-tutorial-edureka](images/chef-09-02.png)
 
@@ -24,7 +24,7 @@ Adicionarei meu Chef Node ao Server executando o comando Knife Bootstrap no qual
 
 Este comando também inicializará a instalação do Chef-Client no Chef Node. Você pode verificá-lo na CLI na Workstations usando o comando faca, conforme mostrado abaixo:
 
-** Executar **** t **** é: **
+**Execute isto:**
 
 >`knife node list`
 

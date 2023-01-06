@@ -12,7 +12,7 @@ Nas  _**Recipes**_ Disponíveis,  você pode ver nossa **_Recipe_** learn\_chef
 
 Agora faça o login no seu Node e apenas execute o chef-client para executar a lista de execução.
 
-** Executar **** t **** é: **
+**Execute isto:**
 
 >`chef-client`
 

@@ -4,11 +4,11 @@ Crie um diretório chamado cookbooks e execute o comando abaixo para gerar o Coo
 
 **Execute** **isto:**
 
->`mkdir **_Cookbooks_**`
+>`mkdir cookbooks`
 
->`cd **_Cookbooks_**  `
+>`cd cookbooks  `
 
->`chef generate **_Cookbook_** httpd_deploy`
+>`chef generate cookbook httpd_deploy`
 
 httpd\_deploy é um nome dado ao Cookbook. Você pode dar o nome que quiser.
 
@@ -26,7 +26,7 @@ Agora vamos ver a estrutura de arquivos do Cookbook criado.
 
 >`tree`
 
-![Estrutura do **_Cookbook_** do Chef - Tutorial do Chef](images/chef-04-01.png)
+![Estrutura do **_Cookbook_** do Chef - Tutorial do Chef](images/chef-04-02.png)
 
 _fonte_: _https://www.edureka.co/blog/chef-tutorial/_
 

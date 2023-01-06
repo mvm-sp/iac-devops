@@ -36,11 +36,11 @@ Agora mova este kit inicial para o diretório do **_Cookbook_** no diretório ch
 
 Os **_Cookbooks_** do Chef estão disponíveis no Cookbook Super Market, podemos ir ao Chef SuperMarket. Baixe os **_Cookbooks_** necessários em _[**supermarket.chef.io**](http://supermarket.chef.io)_. Estou baixando um dos **_Cookbooks_** para instalar o Apache de lá.
 
-** Executar **** e **** é: **
+**Execute** **isto:**
 
 >`cd chef-repo`
 
->`knife **_cookbook_** site download learn_chef_httpd`
+>`knife cookbook site download learn_chef_httpd`
 
 Existe Tar ball baixado para o Apache Cookbook. Agora, precisamos extrair o conteúdo deste arquivo Tar baixado. Para isso, usarei o comando tar.
 
@@ -50,7 +50,7 @@ Existe Tar ball baixado para o Apache Cookbook. Agora, precisamos extrair o cont
 
 Todos os arquivos necessários são criados automaticamente neste **_Cookbook_**. Não há necessidade de fazer nenhuma modificação. Vamos verificar a descrição da **_Recipe_** dentro da minha pasta de  _**Recipes**_.
 
-**Execute t****h****is****:**
+**Execute** **isto:**
 
 >`cd /root/chef-repo/learn_chef_httpd/recipes`
 

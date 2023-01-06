@@ -12,7 +12,7 @@ Aqui adicione o seguinte:
 
 >`service 'httpd' do`
 
->`action [:ativar, :iniciar]`
+>`action [:enable, :start]`
 
 >`end`
 

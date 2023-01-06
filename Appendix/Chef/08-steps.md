@@ -2,7 +2,7 @@
 
 Para carregar o Apache Cookbook que baixei, primeiro mova este arquivo learn\_chef\_httpd para a pasta Cookbooks no chef-repo. Em seguida, altere seu diretório para **_Cookbooks_**.
 
-**Execute t****h****is****:**
+**Execute** **isto:**
 
 >`mv /root/chef-repo/learn_chef_httpd /root/chef-repo/cookbooks`
 
@@ -10,7 +10,7 @@ Agora vá para este diretório de **_Cookbooks_**.
 
 **Execute isto:**
 
->`cd **_cookbooks_** `
+>`cd cookbooks`
 
 Agora neste diretório, execute o comando abaixo para carregar o Apache Cookbook:
 

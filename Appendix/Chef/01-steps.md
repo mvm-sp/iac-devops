@@ -33,7 +33,7 @@ Estou usando duas imagens virtuais, uma para o Chef Workstation e outra para o C
 
 **Passo 1**: Instale o Chef DK (Kit de Desenvolvimento) na estação de trabalho do Chef.
 
-O Chef DK é um pacote que contém todas as ferramentas de desenvolvimento necessárias para codificar o Chef. Aqui está o link para baixar o ![Chef DK](https://downloads.chef.io/chef-dk/).
+O Chef DK é um pacote que contém todas as ferramentas de desenvolvimento necessárias para codificar o Chef. Aqui está o link para baixar o [Chef DK](https://downloads.chef.io/chef-dk/).
 
 ![Chef-DEployment-kit](images/chef-01-01.png)
 
