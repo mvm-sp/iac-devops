@@ -162,11 +162,11 @@ Vamos tentar alguns comandos básicos do Linux.
     ```html    
          <!DOCTYPE html>
          <html>
-         <body style="background-color: tan; font-family: calibri; text-align: center">
-         <h1 style="color: blue">Meu primeiro título</h1>
-         <p>Meu primeiro parágrafo.</p>
-         <img src="http://placehold.it/500x200">
-         </body>
+            <body style="background-color: tan; font-family: calibri; text-align: center">
+                <h1 style="color: blue">Meu primeiro título</h1>
+                <p>Meu primeiro parágrafo.</p>
+                <img src="http://placehold.it/500x200">
+            </body>
          </html>
         
     ```
