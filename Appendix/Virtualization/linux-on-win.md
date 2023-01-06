@@ -31,7 +31,7 @@ Neste módulo, você irá:
 
 
 Habilite o Subsistema do Windows para Linux e instale uma distribuição
-==================================================== =============
+=================================================================
 
 Para habilitar o Windows Subsystem for Linux (WSL) em seu computador, você precisa:
 
