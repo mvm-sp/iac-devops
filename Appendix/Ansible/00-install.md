@@ -1,5 +1,5 @@
 Instalando o Ansible em sistemas operacionais específicos[](#installing-ansible-on-specific-operating-systems "Permalink to this headline")
-==================================================== ==================================================== ==================================
+==========================================================================================================================================
 
 O pacote `ansible` sempre pode ser [instalado a partir do PyPI usando pip](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#intro-installation-guide) na maioria dos sistemas, mas também é empacotado e mantido pela comunidade para uma variedade de distribuições Linux.
 
@@ -10,12 +10,10 @@ As instruções a seguir irão guiá-lo através da instalação do pacote `ansi
 * [Instalando o Ansible no Ubuntu](https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.htm#installing-ansible-on-ubuntu)
     
 * [Instalando o Ansible no Debian](https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.htm#installing-ansible-on-debian)
-    
-* [Instalando o Ansible no Windows](https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.htm#installing-ansible-on-windows)
-    
+  
 
-[Instalando o Ansible no Fedora ou CentOS](https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.htm#id1)[](https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.htm#installing-ansible-on-fedora-or-centos)
--------------------------------------------------- -------------------------------------------------- -------------------
+[Instalando o Ansible no Fedora ou CentOS](https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.htm#installing-ansible-on-fedora-or-centos)
+-----------------------------------------------------------------------------------------------------------------------
 
 No Fedora:
 
@@ -31,8 +29,8 @@ $ sudo yum install ansible
 
 RPMs para versões atualmente suportadas do CentOS também estão disponíveis em [EPEL](https://fedoraproject.org/wiki/EPEL).
 
-[Instalando o Ansible no Ubuntu](#id2)[](#installing-ansible-on-ubuntu)
--------------------------------------------------- --------------------------------------------------
+[Instalando o Ansible no Ubuntu](https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.htm#installing-ansible-on-ubuntu)
+----------------------------------------------------------------------------------------------------
 
 As compilações do Ubuntu estão disponíveis [em um PPA aqui](https://launchpad.net/~ansible/+archive/ubuntu/ansible).
 
@@ -48,17 +46,20 @@ $ sudo apt install ansible
 
         Em distribuições mais antigas do Ubuntu, “software-properties-common” é chamado de “python-software-properties”. Você pode querer usar `apt-get` em vez de `apt` em versões mais antigas. Além disso, esteja ciente de que apenas distribuições mais recentes (ou seja, 18.04, 18.10 e posteriores) têm um sinalizador `-u` ou `--update`. Ajuste seu script conforme necessário.
 
-[Instalando o Ansible no Debian](https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.htm#id3)[](https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.htm#installing-ansible-on-debian "Permalink to this headline")
--------------------------------------------------- --------------------------------------------------
+[Instalando o Ansible no Debian](https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.htm#id3)
+----------------------------------------------------------------------------------------------------
 
 Os usuários do Debian podem usar a mesma fonte do Ubuntu PPA (usando a tabela a seguir).
 
-  
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |  
 
-    |Debian              |   |ubuntu                  |
-    | ---                |---| ---                    |
-    |Debian 11 (Bullseye)|\->|Ubuntu 20.04 (Focal)    |
-    |Debian 10 (Buster)  |\->|Ubuntu 18.04 (Biônico)  |
+| Debian               |     | ubuntu                   |
+| -------------------- | --- | ------------------------ |
+| Debian 11 (Bullseye) | \-> | Ubuntu 20.04 (Focal)     |
+| Debian 10 (Buster)   | \-> | Ubuntu 18.04 (Biônico)   |
 
     Observação
 
@@ -79,8 +80,6 @@ $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
 $ sudo apt update
 $ sudo apt install ansible
 ```
-[Instalando o Ansible no Windows](https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.htm#id4)[](https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.htm#installing-ansible-on-windows)
--------------------------------------------------- -------------------------------------------------- -
 
 Você não pode usar um sistema Windows para o nó de controle Ansible. Consulte [O Ansible pode ser executado no Windows?](https://docs.ansible.com/ansible/latest/os_guide/windows_faq.html#windows-faq-ansible)
 
