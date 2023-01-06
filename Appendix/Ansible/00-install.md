@@ -1,4 +1,4 @@
-Instalando o Ansible em sistemas operacionais específicos[](#installing-ansible-on-specific-operating-systems "Permalink to this headline")
+Instalando o Ansible em sistemas operacionais específicos
 ==========================================================================================================================================
 
 O pacote `ansible` sempre pode ser [instalado a partir do PyPI usando pip](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#intro-installation-guide) na maioria dos sistemas, mas também é empacotado e mantido pela comunidade para uma variedade de distribuições Linux.
