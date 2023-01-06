@@ -55,7 +55,7 @@ Instale Boto, Boto3 e Ansible. A instalação é realizada por meio de uma linha
 
 ```console
 
-$ pip3 install boto boto3 ansible
+pip3 install boto boto3 ansible
 
 ```
 ![Captura de tela do prompt de boto.](images/ansible-00-02.png)
