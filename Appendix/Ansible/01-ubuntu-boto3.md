@@ -38,13 +38,13 @@ Instale Python3 e Python-Pip3. Pip3 será chamado na próxima etapa para instala
 
 ```console
 
-$ sudo apt update
+sudo apt update
 
-$ sudo apt upgrade
+sudo apt upgrade
 
-$ sudo apt install python3
+sudo apt install python3
 
-$ sudo apt install python-pip3
+sudo apt install python-pip3
 
 ```
 

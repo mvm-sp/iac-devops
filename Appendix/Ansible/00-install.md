@@ -18,13 +18,13 @@ As instruções a seguir irão guiá-lo através da instalação do pacote `ansi
 No Fedora:
 
 ```console 
-$ sudo dnf install ansible
+sudo dnf install ansible
 ``` 
 No CentOS:
 
 ```console 
-$ sudo yum install epel-release
-$ sudo yum install ansible
+sudo yum install epel-release
+sudo yum install ansible
 ```
 
 RPMs para versões atualmente suportadas do CentOS também estão disponíveis em [EPEL](https://fedoraproject.org/wiki/EPEL).
@@ -37,16 +37,16 @@ As compilações do Ubuntu estão disponíveis [em um PPA aqui](https://launchpa
 Para configurar o PPA em seu sistema e instalar o Ansible, execute estes comandos:
 
 ```console 
-$ sudo apt update
-$ sudo apt install software-properties-common
-$ sudo add-apt-repository --yes --update ppa:ansible/ansible
+sudo apt update
+sudo apt install software-properties-common
+sudo add-apt-repository --yes --update ppa:ansible/ansible
 ```
 
 Após adicionar o repositório, atualize seu índice do aptitude novamente para que o sistema esteja ciente dos novos pacotes. Em seguida, instale o `ansible`:
 
 ```console 
-$ sudo apt update
-$ sudo apt install ansible
+sudo apt update
+sudo apt install ansible
 ```
 
 Observação
@@ -79,9 +79,9 @@ Os usuários do Debian podem usar a mesma fonte do Ubuntu PPA (usando a tabela a
 Em seguida, execute estes comandos:
 
 ```console 
-$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
-$ sudo apt update
-$ sudo apt install ansible
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
+sudo apt update
+sudo apt install ansible
 ```
 
 Você não pode usar um sistema Windows para o nó de controle Ansible. Consulte [O Ansible pode ser executado no Windows?](https://docs.ansible.com/ansible/latest/os_guide/windows_faq.html#windows-faq-ansible)
