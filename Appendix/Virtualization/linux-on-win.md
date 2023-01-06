@@ -39,10 +39,24 @@ Para habilitar o Windows Subsystem for Linux (WSL) em seu computador, você prec
     
 2. Depois que a janela de comando **Administrador: Windows PowerShell** for aberta, copie e cole este script para habilitar o recurso WSL:
     
-     Cópia do PowerShell
     
          Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
         
+    
+     Observação
+    
+     Outra alternativa é utilizar o painel de controle: `Control Panel > All Control Panel Items > Programs and Features > Turn Windows Features on off`
+
+     ![Turn Windows Features on off](images/linux-05.png)
+
+     Verifique se estas opções estão habilitadas, caso não estejam, habilite-as:
+
+     * **Virtual Machine Platform**
+     * **Windows Subsystem for linux**
+
+     ![Features to turn on](images/linux-06.png)
+     
+
     
 3. Reinicie o computador quando solicitado.
     
@@ -68,7 +82,7 @@ _Recomendamos a instalação do [Ubuntu](https://www.microsoft.com/store/p/ubunt
 2. Na página da distribuição, selecione **Obter**. _(Ubuntu é um download razoavelmente grande, mais de 200 MB, e pode levar algum tempo para instalar.)_
     
 
-Para métodos alternativos de instalação ou solução de problemas, consulte o [Guia de instalação do Windows Subsystem for Linux para Windows 10](/en-us/windows/wsl/install-win10).
+Para métodos alternativos de instalação ou solução de problemas, consulte o [Guia de instalação do Windows Subsystem for Linux para Windows 10](https://learn.microsoft.com/en-us/windows/wsl/install-win10).
 
 ![Exibição das distribuições do Linux na Microsoft Store.](images/linux-01.png)
 
