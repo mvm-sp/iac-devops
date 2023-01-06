@@ -17,12 +17,12 @@ As instruções a seguir irão guiá-lo através da instalação do pacote `ansi
 
 No Fedora:
 
-```bash 
+```shell 
 $ sudo dnf install ansible
 ``` 
 No CentOS:
 
-```bash 
+```shell 
 $ sudo yum install epel-release
 $ sudo yum install ansible
 ```
@@ -36,46 +36,43 @@ As compilações do Ubuntu estão disponíveis [em um PPA aqui](https://launchpa
 
 Para configurar o PPA em seu sistema e instalar o Ansible, execute estes comandos:
 
-```bash 
+```shell 
 $ sudo apt update
 $ sudo apt install software-properties-common
 $ sudo add-apt-repository --yes --update ppa:ansible/ansible
 $ sudo apt install ansible
 ```
-    Observação
 
-        Em distribuições mais antigas do Ubuntu, “software-properties-common” é chamado de “python-software-properties”. Você pode querer usar `apt-get` em vez de `apt` em versões mais antigas. Além disso, esteja ciente de que apenas distribuições mais recentes (ou seja, 18.04, 18.10 e posteriores) têm um sinalizador `-u` ou `--update`. Ajuste seu script conforme necessário.
+Observação
+
+Em distribuições mais antigas do Ubuntu, “software-properties-common” é chamado de “python-software-properties”. Você pode querer usar `apt-get` em vez de `apt` em versões mais antigas. Além disso, esteja ciente de que apenas distribuições mais recentes (ou seja, 18.04, 18.10 e posteriores) têm um sinalizador `-u` ou `--update`. Ajuste seu script conforme necessário.
 
 [Instalando o Ansible no Debian](https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.htm#id3)
 ----------------------------------------------------------------------------------------------------
 
 Os usuários do Debian podem usar a mesma fonte do Ubuntu PPA (usando a tabela a seguir).
 
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |  
-
 | Debian               |     | ubuntu                   |
 | -------------------- | --- | ------------------------ |
 | Debian 11 (Bullseye) | \-> | Ubuntu 20.04 (Focal)     |
 | Debian 10 (Buster)   | \-> | Ubuntu 18.04 (Biônico)   |
 
-    Observação
-
-    As versões do Ansible são criadas apenas para o Ubuntu 18.04 (Bionic) ou versões posteriores.
-
-    Adicione a seguinte linha a `/etc/apt/sources.list` ou `/etc/apt/sources.list.d/ansible.list`:
-
-    deb http://ppa.launchpad.net/ansible/ansible/ubuntu MATCHING\_UBUNTU\_CODENAME\_HERE principal
-
-Exemplo para Debian 11 (Bullseye)
-
-deb http://ppa.launchpad.net/ansible/ansible/ubuntu focal principal
+>Observação
+>
+>As versões do Ansible são criadas apenas para o Ubuntu 18.04 (Bionic) ou versões posteriores.
+>
+>Adicione a seguinte linha a `/etc/apt/sources.list` ou `/etc/apt/sources.list.d/ansible.list`:
+>
+>deb http://ppa.launchpad.net/ansible/ansible/ubuntu MATCHING\_UBUNTU\_CODENAME\_HERE principal
+>
+>Exemplo para Debian 11 (Bullseye)
+>
+>deb http://ppa.launchpad.net/ansible/ansible/ubuntu focal principal
+>
 
 Em seguida, execute estes comandos:
 
-```bash 
+```shell 
 $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
 $ sudo apt update
 $ sudo apt install ansible
