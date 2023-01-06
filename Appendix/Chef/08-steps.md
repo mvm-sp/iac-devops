@@ -4,25 +4,19 @@ Para carregar o Apache Cookbook que baixei, primeiro mova este arquivo learn\_ch
 
 **Execute t****h****is****:**
 
-1
-
-`mv /root/chef-repo/learn_chef_httpd /root/chef-repo/cookbooks`
+>`mv /root/chef-repo/learn_chef_httpd /root/chef-repo/cookbooks`
 
 Agora vá para este diretório de **_Cookbooks_**.
 
 **Execute isto:**
 
-1
-
-`cd **_cookbooks_** `
+>`cd **_cookbooks_** `
 
 Agora neste diretório, execute o comando abaixo para carregar o Apache Cookbook:
 
 ** Executar **** t **** é: **
 
-1
-
-`knife **_cookbook_** upload learn_chef_httpd`
+>`knife cookbook upload learn_chef_httpd`
 
 ![Upload Apache Cookbook - Chef Tutorial](images/chef-08-01.png)
 

@@ -27,25 +27,25 @@ A workstation é o local de onde todas as configurações do Chef são gerencia
 
 As workstations são responsáveis por executar as funções abaixo:
 
-* **Escrevendo _Cookbooks_ e **_Recipes_** que serão posteriormente enviados para o Chef Server central**
+* **Escrevendo _**Cookbooks**_ e **_Recipes_** que serão posteriormente enviados para o Chef Server central**
 * **Gerenciando Nodes no Chef Server central**
 
 Agora, vamos entender os pontos acima mencionados, um por um.
 
-**Escrevendo _Cookbooks_ e **_Recipes_** que serão posteriormente enviados para o Chef Server central**
+Escrevendo _**Cookbooks**_ e **_Recipes_** que serão posteriormente enviados para o Chef Server central
 
-****_Recipes_**:** uma **_Recipe_** é uma coleção de recursos que descreve uma configuração ou política específica. Descreve tudo o que é necessário para configurar parte de um sistema. O usuário escreve **_Recipes_** que descrevem como o Chef gerencia aplicativos e utilitários (como Apache HTTP Server, MySQL ou Hadoop) e como eles devem ser configurados.
+**_Recipes_**: uma **_Recipe_** é uma coleção de recursos que descreve uma configuração ou política específica. Descreve tudo o que é necessário para configurar parte de um sistema. O usuário escreve **_Recipes_** que descrevem como o Chef gerencia aplicativos e utilitários (como Apache HTTP Server, MySQL ou Hadoop) e como eles devem ser configurados.
 
 Essas **_Recipes_** descrevem uma série de recursos que devem estar em um determinado estado, ou seja, pacotes que devem ser instalados, serviços que devem estar em execução ou arquivos que devem ser gravados.
 
-_Mais adiante no blog_, mostrarei como escrever uma **_Recipe_** para instalar o pacote Apache2 nos Chef Nodes escrevendo um código ruby no Chef Workstation.
+_Mais adiante no tutorial_, mostrarei como escrever uma **_Recipe_** para instalar o pacote Apache2 nos Chef Nodes escrevendo um código ruby no Chef Workstation.
 
 **_Cookbooks_:** várias **_Recipes_** podem ser agrupadas para formar um livro de **_Recipes_**. Um livro de **_Recipes_** define um cenário e contém tudo o que é necessário para dar suporte a esse cenário:
 
 * **_Recipes_**, que especifica os recursos a serem usados e a ordem em que devem ser aplicados
 * Valores de atributos
 * Distribuições de arquivos
-*   Modelos
+* Modelos
 * Extensões ao Chef, como bibliotecas, definições e recursos personalizados
 
 **Gerenciando Nodes no Chef Server central**

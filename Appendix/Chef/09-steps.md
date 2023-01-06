@@ -6,9 +6,7 @@ Eu só preciso do endereço IP do meu Node para isso vou executar o comando abai
 
 **Executar****u****t****e** **t****h****é:**
 
-1
-
-`ifconfig`
+>`ifconfig`
 
 ![Endereço IP do Chef Node - Tutorial do Chef](images/chef-09-01.png)
 
@@ -16,9 +14,7 @@ Adicionarei meu Chef Node ao Server executando o comando Knife Bootstrap no qual
 
 ** Executar **** t **** é: **
 
-1
-
-`knife bootstrap 192.168.56.102 --ssh-root do usuário --ssh-password edureka -- ``node-name chefNode`
+>`knife bootstrap 192.168.56.102 --ssh-root do usuário --ssh-password edureka -- ``node-name chefNode`
 
 ![chef-node-bootstrap-1-chef-tutorial-edureka](images/chef-09-02.png)
 
@@ -30,9 +26,7 @@ Este comando também inicializará a instalação do Chef-Client no Chef Node. V
 
 ** Executar **** t **** é: **
 
-1
-
-`knife **_node_** list`
+>`knife node list`
 
 ![Lista de **_Nodes_** do Chef - Tutorial do Chef](images/chef-09-04.png)
 

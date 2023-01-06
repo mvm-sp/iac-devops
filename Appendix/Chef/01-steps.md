@@ -47,9 +47,7 @@ Vá para o terminal da estação de trabalho e baixe o Chef DK usando o comando 
 
 **Execute isto:**
 
-1
-
-`wget https://``packages.chef.io/stable/el/6/chefdk-1.0.3-1.el6.x86_64.rpm`
+>`wget https://``packages.chef.io/stable/el/6/chefdk-1.0.3-1.el6.x86_64.rpm`
 
 ![Baixar Chef DK - Tutorial do Chef](images/chef-01-03.png)
 
@@ -57,9 +55,7 @@ O pacote agora está baixado. É hora de instalar este pacote usando rpm.
 
 **Execute isto:**
 
-1
-
-`rpm -ivh chefdk-1.0.3-1.el6.x86_64.rpm`
+>`rpm -ivh chefdk-1.0.3-1.el6.x86_64.rpm`
 
 ![Instalar Chef DK - Tutorial do Chef](images/chef-01-04.png)
 

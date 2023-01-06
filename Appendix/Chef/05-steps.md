@@ -4,9 +4,7 @@ Anteriormente, criei um arquivo com alguns conteúdos, mas que não cabem nas mi
 
 **Execute** **isto:**
 
-1
-
-`chef generate template httpd_deploy index.html`
+>`chef generate template httpd_deploy index.html`
 
 ![Create Chef Template - Chef Tutorial](images/chef-05-01.png)
 
@@ -18,23 +16,17 @@ Vá para o diretório padrão
 
 **Execute** **isto:**
 
-1
-
-`cd /root/chef-repo/cookbook/httpd_deploy/templates/default`
+>`cd /root/chef-repo/cookbook/httpd_deploy/templates/default`
 
 Aqui, edite o modelo index.html.erb usando qualquer editor com o qual você se sinta confortável. Vou usar o editor vim.
 
 **Execute** **isto:**
 
-1
-
-`vim index.html.erb`
+>`vim index.html.erb`
 
 Agora adicione o seguinte:
 
-1
-
-`Bem-vindo ao Chef Apache Deployment`
+>`Bem-vindo ao Chef Apache Deployment`
 
 _fonte_: _https://www.edureka.co/blog/chef-tutorial/_
 

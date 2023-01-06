@@ -14,9 +14,7 @@ Agora faça o login no seu Node e apenas execute o chef-client para executar a l
 
 ** Executar **** t **** é: **
 
-1
-
-`chef-client`
+>`chef-client`
 
 ![Execute Chef-Client - Chef Tutorial](images/chef-10-04.png)
 

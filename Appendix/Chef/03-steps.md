@@ -4,39 +4,23 @@ Vou modificar a **_Recipe_** para instalar o pacote httpd na minha Workstations
 
 **Execute** **isto:**
 
-1
-
-`vim edureka.rb`
+>`vim edureka.rb`
 
 Aqui adicione o seguinte:
 
-1
+>`package 'httpd'`
 
-2
+>`service 'httpd' do`
 
-3
+>`action [:ativar, :iniciar]`
 
-4
+>`end`
 
-5
+>`file '/var/www/html/index.html' do`
 
-6
+>`content 'Bem-vindo ao Apache no Chef'`
 
-7
-
-`package 'httpd'`
-
-`service 'httpd' do`
-
-`action [:ativar, :iniciar]`
-
-`end`
-
-`file '/var/www/html/index.html' do`
-
-`content 'Bem-vindo ao Apache no Chef'`
-
-`end`
+>`end`
 
 ![**_Recipe_** do Pacote HTTPD - Tutorial do Chef](images/chef-03-01.png)
 
@@ -44,9 +28,7 @@ Agora vou aplicar essas configurações executando o comando abaixo:
 
 **Execute** **isto:**
 
-1
-
-`chef-apply edureka.rb`
+>`chef-apply edureka.rb`
 
 ![Apply httpd Recipe - Chef Tutorial](images/chef-03-02.png)
 
