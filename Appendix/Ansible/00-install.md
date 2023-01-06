@@ -17,12 +17,12 @@ As instruções a seguir irão guiá-lo através da instalação do pacote `ansi
 
 No Fedora:
 
-```shell 
+```console 
 $ sudo dnf install ansible
 ``` 
 No CentOS:
 
-```shell 
+```console 
 $ sudo yum install epel-release
 $ sudo yum install ansible
 ```
@@ -36,10 +36,16 @@ As compilações do Ubuntu estão disponíveis [em um PPA aqui](https://launchpa
 
 Para configurar o PPA em seu sistema e instalar o Ansible, execute estes comandos:
 
-```shell 
+```console 
 $ sudo apt update
 $ sudo apt install software-properties-common
 $ sudo add-apt-repository --yes --update ppa:ansible/ansible
+```
+
+Após adicionar o repositório, atualize seu índice do aptitude novamente para que o sistema esteja ciente dos novos pacotes. Em seguida, instale o `ansible`:
+
+```console 
+$ sudo apt update
 $ sudo apt install ansible
 ```
 
@@ -72,7 +78,7 @@ Os usuários do Debian podem usar a mesma fonte do Ubuntu PPA (usando a tabela a
 
 Em seguida, execute estes comandos:
 
-```shell 
+```console 
 $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
 $ sudo apt update
 $ sudo apt install ansible

@@ -10,7 +10,7 @@ Para usar o Ansible com AWS, alguns aplicativos complementares precisam ser inst
 Ansible é escrito na linguagem de programação Python. Por causa disso, o Python e as ferramentas de suporte precisam ser instalados. A documentação do Ansible diz que os seguintes pacotes são necessários: Python versão 2.6 ou superior e Boto. Boto é o AWS Software Development Kit (SDK) para python. Este guia opta por usar as versões mais recentes desses pacotes. Especificamente, a versão 3.x. O Pip (Package Installer for Python) também é instalado e é usado para trazer o próprio Ansible.
 
 **Passo a passo para um iniciante instalar o Ansible na AWS**
-=============================================================
+--------------------------------------------------------------
 
 1.  Ansible é uma ferramenta de automação de TI que automatiza a configuração, implantação e gerenciamento de aplicações. Ansible usa um conjunto de tarefas chamadas de playbooks para automatizar tarefas em seus servidores.
 2.  Para instalar o Ansible, você precisará de um servidor Ansible controlador e de vários servidores de destino. O servidor Ansible controlador pode ser executado em qualquer plataforma, incluindo Linux, MacOS ou Windows. O servidor de destino deve ser um sistema Linux.
@@ -23,16 +23,13 @@ Ansible é escrito na linguagem de programação Python. Por causa disso, o Pyth
 9.  O Ansible controlador deve ter o módulo Ansible AWS instalado. Você pode instalar o módulo Ansible AWS usando o pip.
 10.  O Ansible controlador deve ter o módulo Ansible boto3 instalado. Você pode instalar o módulo Ansible boto3 usando o pip.
 
-Requisitos:
+**Requisitos:**
 
 * Python3
     
 * Pip3
     
 * Boto + Boto3
-    
-
-Ansible:
 
 * Ansible
     
@@ -40,9 +37,15 @@ Ansible:
 Instale Python3 e Python-Pip3. Pip3 será chamado na próxima etapa para instalar Boto, Boto3 e Ansible.
 
 ```console
-sudo apt instalar python3
 
-sudo apt install python-pip3
+$ sudo apt update
+
+$ sudo apt upgrade
+
+$ sudo apt install python3
+
+$ sudo apt install python-pip3
+
 ```
 
 ![Captura de tela do prompt de python.](images/ansible-00-01.png)
@@ -50,16 +53,20 @@ sudo apt install python-pip3
 
 Instale Boto, Boto3 e Ansible. A instalação é realizada por meio de uma linha.
 
-```sh
-pip3 instalar boto boto3 ansible
+```console
+
+$ pip3 install boto boto3 ansible
+
 ```
 ![Captura de tela do prompt de boto.](images/ansible-00-02.png)
 
 
 Verifique se o Ansible está instalado e pode ser chamado.
 
-```bash session
-ansible —versão
+```console
+
+$ ansible —versão
+
 ```
 
 ![Captura de tela do prompt de version.](images/ansible-00-03.png)
