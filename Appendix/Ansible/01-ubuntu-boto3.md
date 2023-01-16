@@ -65,7 +65,7 @@ Verifique se o Ansible está instalado e pode ser chamado.
 
 ```console
 
-ansible —versão
+ansible —-version
 
 ```
 

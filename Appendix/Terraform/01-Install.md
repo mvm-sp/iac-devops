@@ -90,3 +90,5 @@ Windows
 
 </p>
 </details>
+
+_fonte_ : _https://developer.hashicorp.com/terraform/tutorials_

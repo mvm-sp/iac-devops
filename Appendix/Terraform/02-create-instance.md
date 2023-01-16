@@ -11,13 +11,14 @@ Pré-requisitos
 
 Para usar suas credenciais IAM para autenticar o provedor Terraform AWS, defina a variável de ambiente `AWS_ACCESS_KEY_ID`.
 
-     $ exportação AWS_ACCESS_KEY_ID=
+     $ export AWS_ACCESS_KEY_ID=
 
 Agora defina a variável de ambiente `AWS_SECRET_ACCESS_KEY`.
 
-     $ exportação AWS_SECRET_ACCESS_KEY=
+     $ export AWS_SECRET_ACCESS_KEY=
 
 >**Dica:** Se você não tiver acesso às credenciais de usuário do IAM, use outro método de autenticação descrito na [documentação do provedor da AWS](https://registry.terraform.io/providers/hashicorp/aws/latest/docs).
+
 
 Gravar configuração
 -------------------------------------------
@@ -38,7 +39,7 @@ Copiar Crie um arquivo para definir sua infraestrutura.
 
 Abra main.tf em seu editor de texto, cole a configuração abaixo e salve o arquivo.
 
->**Dica:** O ID da AMI usado nesta configuração é específico para a região `us-west-2`. Se você quiser usar uma região diferente, consulte a [seção de solução de problemas](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/aws-build#troubleshooting) para obter orientação.
+>**Dica:** O ID da AMI usado nesta configuração é específico para a região `us-east-1`. Se você quiser usar uma região diferente, consulte a [seção de solução de problemas](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/aws-build#troubleshooting) para obter orientação.
 
 ```terraform
 
@@ -95,6 +96,7 @@ Os blocos de recursos têm duas strings antes do bloco: o tipo de recurso e o no
 
 Os blocos de recursos contêm argumentos que você usa para configurar o recurso. Os argumentos podem incluir coisas como tamanhos de máquinas, nomes de imagens de disco ou IDs de VPC. Nossa [referência de provedores](https://developer.hashicorp.com/terraform/language/providers) lista os argumentos obrigatórios e opcionais para cada recurso. Para sua instância do EC2, a configuração de exemplo define o ID da AMI para uma imagem do Ubuntu e o tipo de instância para `t2.micro`, que se qualifica para o nível gratuito da AWS. Ele também define uma tag para dar um nome à instância.
 
+
 Inicialize o Projeto
 ----------------------
 
@@ -108,6 +110,7 @@ A inicialização de um diretório de configuração baixa e instala os provedor
 ![Captura de tela do prompt de init.](images/terraform-01-01.png)
 
 O Terraform baixa o provedor `aws` e o instala em um subdiretório oculto do seu diretório de trabalho atual, denominado `.terraform`. O comando `terraform init` imprime qual versão do provedor foi instalada. O Terraform também cria um arquivo de bloqueio chamado `.terraform.lock.hcl` que especifica as versões exatas do provedor usadas, para que você possa controlar quando deseja atualizar os provedores usados para seu projeto.
+
 
 Formatar e Validar a configuração
 -----------------------------------
@@ -123,6 +126,7 @@ Você também pode certificar-se de que sua configuração seja sintaticamente v
     $ terraform validate
 
 ![Captura de tela do prompt de validate.](images/terraform-01-02.png)
+
 
 Criar o recurso
 -----------------------
@@ -146,9 +150,10 @@ Neste caso, o plano é aceitável, então digite `yes` no prompt de confirmaçã
 
 ![Captura de tela do prompt de yes.](images/terraform-01-04.png)
 
-Agora você criou uma infraestrutura usando o Terraform! Visite o [console do EC2](https://console.aws.amazon.com/ec2/v2/home?region=us-west-2#Instances:sort=instanceId) e encontre sua nova instância do EC2.
+Agora você criou uma infraestrutura usando o Terraform! Visite o [console do EC2](https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#Instances:) e encontre sua nova instância do EC2.
 
 ![Captura de tela do prompt de created.](images/terraform-01-05.png)
 
->**Observação:** de acordo com o bloco do provedor `aws`, sua instância foi criada na região `us-west-2`. Certifique-se de que seu Console AWS esteja definido para esta região.
+>**Observação:** de acordo com o bloco do provedor `aws`, sua instância foi criada na região `us-east-1`. Certifique-se de que seu Console AWS esteja definido para esta região.
 
+_fonte_ : _https://developer.hashicorp.com/terraform/tutorials_
