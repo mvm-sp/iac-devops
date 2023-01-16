@@ -1,4 +1,4 @@
-Criando uma instancia EC2 (AWS)
+Criando uma instância EC2 (AWS)
 ==========================================================================================================================================
 
 Requisitos
@@ -8,7 +8,7 @@ Requisitos
 * [boto3](01-ubuntu-boto3.md) >= 1.18.0
 * [botocore](01-ubuntu-boto3.md) >= 1.21.0
 
-Criar a instancia
+Criar a instância
 
 Abra uma sessão do `bash` na máquina em que você instalou e configurou o `ansible`
 
@@ -47,11 +47,11 @@ no seu diretório de trabalho crie o arquivo `create.yml`
 
 ```
 
-Execute o comando `ansible-playbook` para criar a instancia em sua conta da AWS:
+Execute o comando `ansible-playbook` para criar a instância em sua conta da AWS:
 
     $ ansible-playbook create.yml
 
-O comando irá provisionar uma instância EC2 em sua conta AWS, voçê poderá checar no link do [console AWS](https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#Instances:)
+O comando irá provisionar uma instância EC2 em sua conta AWS, você poderá checar no link do [console AWS](https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#Instances:)
 
 ![Captura de tela do prompt de boto.](images/ansible-02-02.png)
 

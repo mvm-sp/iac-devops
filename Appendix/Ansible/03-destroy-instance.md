@@ -1,4 +1,4 @@
-Encerrando uma instancia EC2 (AWS)
+Encerrando uma instância EC2 (AWS)
 ==========================================================================================================================================
 
 
@@ -60,11 +60,11 @@ Ou poderá utilzar o recurso de filtros para encerrar uma ou mais instências qu
 
 ```
 
-Execute o comando `ansible-playbook` para eliminar a(s) instancia(s) em sua conta da AWS:
+Execute o comando `ansible-playbook` para eliminar a(s) instância(s) em sua conta da AWS:
 
     $ ansible-playbook destroy.yml
 
-O comando irá provisionar uma instância EC2 em sua conta AWS, voçê poderá checar no link do [console AWS](https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#Instances:)
+O comando irá provisionar uma instância EC2 em sua conta AWS, você poderá checar no link do [console AWS](https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#Instances:)
 
 ![Captura de tela do prompt de boto.](images/ansible-03-01.png)
 

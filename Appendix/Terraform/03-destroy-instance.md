@@ -1,4 +1,4 @@
-Destruindo uma instancia EC2 (AWS) com a utilização do Estado da aplicação
+Destruindo uma instância EC2 (AWS) com a utilização do Estado da aplicação
 ==========================================================================================================================================
 
 
