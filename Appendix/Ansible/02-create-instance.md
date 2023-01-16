@@ -47,9 +47,9 @@ no seu diretório de trabalho crie o arquivo `create.yml`
 
 ```
 
-Execute o comando `ansile-playbook` para criar a instancia em sua conta da AWS:
+Execute o comando `ansible-playbook` para criar a instancia em sua conta da AWS:
 
-    $ ansile-playbook create.yml
+    $ ansible-playbook create.yml
 
 O comando irá provisionar uma instância EC2 em sua conta AWS, voçê poderá checar no link do [console AWS](https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#Instances:)
 
@@ -58,3 +58,4 @@ O comando irá provisionar uma instância EC2 em sua conta AWS, voçê poderá c
 Ao final, sua instância EC2 estará disponível 
 
 ![Captura de tela do prompt de boto.](images/ansible-02-04.png)
+
