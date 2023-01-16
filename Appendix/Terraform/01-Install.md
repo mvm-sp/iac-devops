@@ -18,9 +18,13 @@ Após baixar o Terraform, descompacte o pacote. O Terraform é executado como um
 </p>
 </details>
 
-pré-compilado do git
+<details><summary>
+
+Pré-compilado do git
 ------------------------
 
+</summary>
+<p>
 Para compilar o binário Terraform a partir da fonte, clone o [repositório Terraform HashiCorp](https://github.com/hashicorp/terraform).
 
 $ git clone https://github.com/hashicorp/terraform.git
@@ -43,12 +47,18 @@ $ go install
      $ go install
     
 
-
+</p>
+</details>
 
 Por fim, certifique-se de que o binário `terraform` esteja disponível em seu `PATH`. Este processo será diferente dependendo do seu sistema operacional.
 
+<details><summary>
+
 Mac ou Linux
 ----------------
+
+</summary>
+<p>
 
 Imprima uma lista de locais separados por dois pontos em seu `PATH`.
 
@@ -66,8 +76,17 @@ $ mv ~/Downloads/terraform /usr/local/bin/
 
 Para obter mais detalhes sobre como adicionar binários ao seu caminho, consulte [este artigo do Stack Overflow](https://stackoverflow.com/questions/14637979/how-to-permanently-set-path-on-linux).    
 
+</p>
+</details>
+
+<details><summary>
 
 Windows
 ------------
+</summary>
+<p>
 
 [Este artigo Stack Overflow](https://stackoverflow.com/questions/1618280/where-can-i-set-path-to-make-exe-on-windows) contém instruções para definir o PATH no Windows por meio do usuário interface.
+
+</p>
+</details>
