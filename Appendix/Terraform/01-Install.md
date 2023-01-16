@@ -4,8 +4,8 @@ Instalando o Terraform Windows/Linux
 Recupere o binário `terraform` baixando um binário pré-compilado ou compilando-o a partir do código-fonte.
 <details><summary>
 
-Binário Compilado
-------------------
+DownLoad do Binário
+---------------------
 
 </summary>
 <p>
@@ -20,7 +20,7 @@ Após baixar o Terraform, descompacte o pacote. O Terraform é executado como um
 
 <details><summary>
 
-Pré-compilado do git
+Clone a partir do Git
 ------------------------
 
 </summary>
