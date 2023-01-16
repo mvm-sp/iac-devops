@@ -40,7 +40,7 @@ Abra main.tf em seu editor de texto, cole a configuração abaixo e salve o arqu
 
 >**Dica:** O ID da AMI usado nesta configuração é específico para a região `us-west-2`. Se você quiser usar uma região diferente, consulte a [seção de solução de problemas](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/aws-build#troubleshooting) para obter orientação.
 
-´´´terraform
+```terraform
 
 terraform {
   required_providers {
@@ -65,7 +65,8 @@ resource "aws_instance" "app_server" {
     Name = "ExampleAppServerInstance"
   }
 }
-´´´
+
+```
 
 Esta é uma configuração completa que você pode implantar com o Terraform. As seções a seguir revisam cada bloco dessa configuração com mais detalhes.
 
