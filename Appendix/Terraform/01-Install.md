@@ -2,12 +2,21 @@ Instalando o Terraform Windows/Linux
 ==========================================================================================================================================
 
 Recupere o binário `terraform` baixando um binário pré-compilado ou compilando-o a partir do código-fonte.
+<details><summary>
 
 Binário Compilado
 ------------------
+
+</summary>
+<p>
+
+
 Para instalar o Terraform, encontre o [pacote apropriado](https://developer.hashicorp.com/terraform/downloads) para o seu sistema e baixe-o como um arquivo zip.
 
 Após baixar o Terraform, descompacte o pacote. O Terraform é executado como um único binário chamado `terraform`. Quaisquer outros arquivos no pacote podem ser removidos com segurança e o Terraform ainda funcionará.
+
+</p>
+</details>
 
 pré-compilado do git
 ------------------------
