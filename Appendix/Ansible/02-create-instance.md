@@ -56,3 +56,5 @@ O comando irá provisionar uma instância EC2 em sua conta AWS, voçê poderá c
 ![Captura de tela do prompt de boto.](images/ansible-02-02.png)
 
 Ao final, sua instância EC2 estará disponível 
+
+![Captura de tela do prompt de boto.](images/ansible-02-04.png)
