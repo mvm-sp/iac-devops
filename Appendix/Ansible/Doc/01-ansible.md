@@ -23,6 +23,7 @@ ansible[](#ansible "Permalink to this headline")
 [Sinopse](#id2)[](#synopsis "Permalink to this headline")
 -------------------------------------------------- ----------
 
+```console
 uso: ansible \[\-h\] \[\--version\] \[\-v\] \[\-b\] \[\--become-method BECOME\_METHOD\]
              \[\--become-user BECOME\_USER\]
              \[\-K | --become-password-file BECOME\_PASSWORD\_FILE\]
@@ -39,6 +40,8 @@ uso: ansible \[\-h\] \[\--version\] \[\-v\] \[\-b\] \[\--become-method BECOME\_M
              \[\-f FORKS\] \[\-M MODULE\_PATH\] \[\--playbook-dir BASEDIR\]
              \[\--task-timeout TASK\_TIMEOUT\] \[\-a MODULE\_ARGS\] \[\-m MODULE\_NAME\]
              padronizar
+
+```
 
 [Description](#id3)[](#description "Permalink to this headline")
 -------------------------------------------------- ---------------
