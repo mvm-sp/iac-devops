@@ -39,7 +39,7 @@ Opções comuns
 
 ```console
 
---ask-vault-password, --ask-vault-pass[](#cmdoption-ansible-ask-vault-password "Link permanente para esta definição")
+--ask-vault-password, --ask-vault-pass
 
 ```
 
@@ -47,7 +47,7 @@ pedir senha do cofre
 
 ```console
 
---become-method <BECOME_METHOD>[](#cmdoption-ansible-become-method "Link permanente para esta definição")
+--become-method <BECOME_METHOD>
 
 ```
 
@@ -170,7 +170,7 @@ arquivo de senha do cofre
 
 --version
 
-```console
+```
 
 mostra o número da versão do programa, localização do arquivo de configuração, caminho de pesquisa do módulo configurado, localização do módulo, localização do executável e saída
 
