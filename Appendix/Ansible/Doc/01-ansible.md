@@ -3,7 +3,7 @@ ansible[](#ansible "Permalink to this headline")
 
 **Defina e execute um 'playbook' de tarefa única em um conjunto de hosts**
 
-* [Sinopse](#sinopse)
+* [Sinopse][sinopse]
     
 * [Descrição](#descrição)
     
@@ -20,7 +20,7 @@ ansible[](#ansible "Permalink to this headline")
 * [Veja também](#veja-também)
     
 
-[Sinopse](#id2)[](#synopsis "Permalink to this headline")
+[Sinopse](#sinopse)
 -------------------------------------------------- ----------
 
 ```console
