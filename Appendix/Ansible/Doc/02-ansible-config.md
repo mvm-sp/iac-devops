@@ -193,4 +193,4 @@ Licença
 
 Ansible é lançado sob os termos da licença GPLv3+.
 
-_fonte_ : 
+_fonte_ : _https://docs.ansible.com/ansible/latest/cli/ansible-config.html_
