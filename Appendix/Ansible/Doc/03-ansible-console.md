@@ -280,7 +280,7 @@ defina variáveis adicionais como chave=valor ou YAML/JSON, se o nome do arquivo
 
 -f <FORKS>, --forks <FORKS>
 
-```console
+```
 
 especifique o número de processos paralelos a serem usados (padrão = 5)
 
