@@ -1,4 +1,4 @@
-ansible[](#ansible "Permalink to this headline")
+ansible
 =================================================
 
 **Defina e execute um 'playbook' de tarefa única em um conjunto de hosts**
