@@ -6,6 +6,8 @@ ansible-playbook
 Sinopse 
 ------------------------------------------------------------
 
+```console
+
 ansible-playbook     [-h] [--version] [-v] [--private-key PRIVATE_KEY_FILE]
                      [-u REMOTE_USER] [-c CONNECTION] [-T TIMEOUT]
                      [--ssh-common-args SSH_COMMON_ARGS]
@@ -25,6 +27,8 @@ ansible-playbook     [-h] [--version] [-v] [--private-key PRIVATE_KEY_FILE]
                      [--list-tags] [--step] [--start-at-task START_AT_TASK]
                      playbook [playbook ...]
                      
+
+```
 
 Descrição 
 -----------------------------------------------------------------
@@ -110,7 +114,7 @@ listar todas as tags disponíveis
 
 --list-tasks 
 
-```consoe
+```
 
 listar todas as tarefas que seriam executadas
 
@@ -140,7 +144,7 @@ especifique argumentos extras para passar apenas para sftp (por exemplo, -f, -l)
 
 ```console
 
---skip-tags *del*skip-tags 
+--skip-tags 
 
 ```
 
@@ -256,7 +260,7 @@ substituir o tempo limite de conexão em segundos (padrão = 10)
 
 ```
 
-executar operações com torne-se (não implica solicitação de senha)
+executar operações com outros privilegios (não implica solicitação de senha)
 
 ```console
 
