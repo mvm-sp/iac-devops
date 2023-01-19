@@ -151,7 +151,7 @@ especifique o caminho do host de inventário ou a lista de hosts separada por v�
 
 -v, --verbose
 
-```console
+```
 
 Faz com que o Ansible imprima mais mensagens de depuração. Adicionar vários -v aumentará a verbosidade, os plug-ins integrados atualmente avaliam até -vvvvvv. Um nível razoável para iniciar é -vvv, a depuração de conexão pode exigir -vvvv.
 
