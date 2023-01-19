@@ -55,7 +55,7 @@ Ações
 
 Execute a ação em uma _collection_ Ansible Galaxy. Deve ser combinado com uma ação adicional como init/install conforme listado abaixo.
 
-#### download da _collection_
+#### _collection_ download
 
 ```console
 
@@ -137,7 +137,7 @@ Um arquivo contendo uma lista de coleções a serem baixadas.
 
 A URL do servidor da API do Galaxy
 
-#### inicialização da _collection_
+#### _collection_ init
 
 Cria a estrutura de esqueleto de uma função ou _collection_ compatível com o formato de metadados do Galaxy. Requer um nome de função ou _collection_. O nome da _collection_ deve estar no formato `<namespace>.<_collection_>`.
 
@@ -197,7 +197,7 @@ Forçar a substituição de uma função ou _collection_ existente
 
 A URL do servidor da API do Galaxy
 
-#### compilação da _collection_
+#### _collection_ build
 
 Crie um artefato de _collection_ do Ansible Galaxy que possa ser armazenado em um repositório central como o Ansible Galaxy. Por padrão, esse comando é criado a partir do diretório de trabalho atual. Você pode, opcionalmente, passar o caminho de entrada da _collection_ (onde está o arquivo `galaxy.yml`).
 
@@ -250,7 +250,7 @@ Forçar a substituição de uma função ou _collection_ existente
 
 A URL do servidor da API do Galaxy
 
-#### publicação da _collection_
+#### _collection_ publish
 
 Publique uma _collection_ no Ansible Galaxy. Requer o caminho para o tarball da _collection_ a ser publicado.
 
@@ -334,7 +334,7 @@ Força a substituição de uma _collection_ existente e suas dependências.
 
 ```
 
-Um código de status a ser ignorado durante a verificação da assinatura (por exemplo, NO_PUBKEY). Forneça esta opção várias vezes para ignorar uma lista de códigos de status. As descrições das opções podem ser vistas em L([https://github.com/gpg/gnupg/blob/master/doc/DETAILS#general-status-codes](https://github.com/gpg/gnupg/ blob/master/doc/DETAILS#general-status-codes)).
+Um código de status a ser ignorado durante a verificação da assinatura (por exemplo, NO_PUBKEY). Forneça esta opção várias vezes para ignorar uma lista de códigos de status. As descrições das opções podem ser vistas em Repositório de documentos([Github](https://github.com/gpg/gnupg/blob/master/doc/DETAILS#general-status-codes)).
 
 ```console
 
@@ -464,7 +464,7 @@ Um arquivo contendo uma lista de coleções a serem instaladas.
 
 A URL do servidor da API do Galaxy
 
-#### lista de _collection_
+#### _collection_ list
 
 Listar coleções ou funções instaladas
 
@@ -516,7 +516,7 @@ Um ou mais diretórios para pesquisar coleções além do padrão COLLECTIONS_PA
 
 A URL do servidor da API do Galaxy
 
-#### verificação da _collection_
+#### _collection_ verify
 
 ```console
 
@@ -524,7 +524,7 @@ A URL do servidor da API do Galaxy
 
 ```
 
-Um código de status a ser ignorado durante a verificação da assinatura (por exemplo, NO_PUBKEY). Forneça esta opção várias vezes para ignorar uma lista de códigos de status. As descrições das opções podem ser vistas em L([https://github.com/gpg/gnupg/blob/master/doc/DETAILS#general-status-codes](https://github.com/gpg/gnupg/ blob/master/doc/DETAILS#general-status-codes)).
+Um código de status a ser ignorado durante a verificação da assinatura (por exemplo, NO_PUBKEY). Forneça esta opção várias vezes para ignorar uma lista de códigos de status. As descrições das opções podem ser vistas em Repositório de documentos([Github](https://github.com/gpg/gnupg/blob/master/doc/DETAILS#general-status-codes)).
 
 ```console
 
@@ -811,11 +811,15 @@ _p, -roles-path
 
 O caminho para o diretório que contém suas funções. O padrão é o primeiro gravável configurado via DEFAULT_ROLES_PATH: {{ ANSIBLE_HOME ~ “/roles:/usr/share/ansible/roles:/etc/ansible/roles” }}
 
--s  <API_SERVER>, -server  <API_SERVER> role-list-s 
+```console
+
+-s  <API_SERVER>, -server  <API_SERVER> 
+
+```
 
 A URL do servidor da API do Galaxy
 
-#### pesquisa de função
+#### role search
 
 procura funções no servidor Ansible Galaxy
 

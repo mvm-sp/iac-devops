@@ -110,7 +110,7 @@ Liste os plug-ins disponíveis. Um argumento fornecido será usado para filtrage
 
 -r, --roles-path
 
-```console
+```
 
 O caminho para o diretório que contém suas funções.
 
