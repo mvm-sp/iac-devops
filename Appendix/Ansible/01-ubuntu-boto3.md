@@ -38,13 +38,13 @@ Instale Python3 e Python-Pip3. Pip3 será chamado na próxima etapa para instala
 
 ```console
 
-sudo apt update
+sudo apt update ou sudo apt-get update
 
 sudo apt upgrade
 
-sudo apt install python3
+sudo apt install python3 
 
-sudo apt install python-pip3
+sudo apt install python-pip3 ou sudo apt-get install -y python3-pip
 
 ```
 
@@ -55,7 +55,7 @@ Instale Boto, Boto3 e Ansible. A instalação é realizada por meio de uma linha
 
 ```console
 
-pip3 install boto boto3 ansible
+sudo pip3 install boto boto3 ansible
 
 ```
 ![Captura de tela do prompt de boto.](images/ansible-00-02.png)

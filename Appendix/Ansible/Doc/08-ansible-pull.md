@@ -1,4 +1,4 @@
-ansible-pull[](#ansible-pull 
+ansible-pull
 =============================================================
 
 **Gerencia playbooks de um repositório VCS e os executa para o host local**
@@ -43,7 +43,7 @@ Opções comuns
 
 ```console
 
---accept-host-key -del-accept-host-key 
+--accept-host-key 
 
 ```
 

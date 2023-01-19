@@ -320,7 +320,7 @@ saída condensada
 
 ```console
 
--t <ÁRVORE>, --árvore <ÁRVORE>
+-t <TREE>, --tree <TREE>
 
 ```
 
