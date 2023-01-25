@@ -10,7 +10,7 @@ O inventário mais simples é um único diretório com uma lista de `hosts` e `g
 
 [Plugins de inventário](https://docs.ansible.com/ansible/latest/plugins/inventory.html#inventory-plugins) suportam uma gama de formatos e fontes para tornar o seu inventário flexível e personalizável. À medida que o seu inventário se expande, poderá precisar de mais do que um único diretório para organizar os seus `hosts` e `groups`. Aqui estão três opções para além do diretório `/etc/ansible/hosts`: - Pode criar um diretório com múltiplos diretórios de inventário. Ver [Organizar inventário num diretório](https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html#inventory-directory). Estes podem utilizar formatos diferentes (YAML, ini, e assim por diante). - Pode puxar o inventário de forma dinâmica. Por exemplo, pode usar um plugin de inventário dinâmico para listar recursos em um ou mais fornecedores de nuvem. Ver [Trabalhar com inventário dinâmico](https://docs.ansible.com/ansible/latest/inventory_guide/intro_dynamic_inventory.html#intro-dynamic-inventory). - Pode utilizar múltiplas fontes para inventário, incluindo tanto o inventário dinâmico como os diretórios estáticos. Ver [Aprovação de múltiplas fontes de inventário](#utilização de múltiplas fontes de inventário).
 
-**Configurando o seu host com o arquivo de `hosts` e autenticação por chaves assimétricas**
+**Configurando o arquivo de `hosts` e autenticação por chaves assimétricas**
 --------------------------------------------------------------------------------------------
 
 A seguir faremos um passo a passo para construirmos nosso inventário via arquivo de `hosts` do `ansible` habilitando a comunicação entre os servidores utilizando troca de chaves assimétricas.
@@ -52,3 +52,9 @@ Utilizando a estrutura da AWS, temos nosso 3 servidores configurados:
 
 ![Captura de tela instâncias AWS](images/ansible-04-06.png)
 
+Por padrão, a AWS atribui 2 endereços `IPV4` para cada instância sendo um deles público e outro privado, para interações entre os servidores utilizando uma sessão `bash` de dentro do console `AWS` os endereços privados são suficientes para que os servidores possam ser acessados, podemos obter mais detalhes na documentação da `AWS` [Ip Addressing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html). Como nesse exercício faremos o acesso aos servidores via ssh a partir de uma máquina local, utilizaremos os endereços `IPV4` públicos.
+
+![Captura de tela instâncias AWS](images/ansible-04-10.png)
+
+## Observação:
+>Endereços públicos de susas instâncias podem ser dinâmicos, ou seja, serem alterados sempre que um `boot` for executado, existem formas de fixarmos esses endereços, porém, sempre incorrerão em custos adicionais para as aplicações, os endereços privados, apesar de terem limitações quanto ao acesso, oferecem um controle maior para os administradores de rede, podendo ser fixados em cada instância sem a necessidade de expô-los para fora do ambiente em que está configurado.
