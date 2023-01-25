@@ -149,9 +149,9 @@ Vamos precisar indicar como o console do `ansible` vai autenticar-se em cada um 
 **Passo 3 - Troca de chaves entre servidores - Gerar Chave**
 ------------------------------------------------------------
 
-Este também é um tema bastante extenso e não precisamos esgotar o assunto nesse exercício, vamos apenas apresentar uma forma rápida de permitir que 2 máquinas possam estabelecer um conexão por meio de uma identificação confiável entre elas.
+Este também é um tema bastante extenso e não precisamos esgotar o assunto nesse exercício, vamos apenas apresentar uma forma rápida de permitir que 2 máquinas possam estabelecer uma conexão por meio de uma identificação confiável entre elas.
 
-Para iniciarmos o processo, uma das máquinas, aquela que deseja estabelecer a conexão, precisa obter uma _chave de identificação_, uma espécie de certificado que atesta uma identidade para outros servidores.
+Para iniciarmos o processo, uma das máquinas, aquela que deseja estabelecer a conexão, precisa possuir uma _chave de identificação_, uma espécie de certificado que atesta uma identidade para outros servidores.
 
 No nosso exemplo, vamos utilizar um gerador dessa identificação fornecido pelo `linux`, o comando `ssh-keygen`.
 
@@ -164,8 +164,6 @@ Para executar o comando `ssh-keygen` recomendamos que você verifique se o seu c
 
 ao exibir o conteúdo do diretório, certifique-se de que exista apenas o arquivo `authorized_keys`, assim você garante que a chave que estamos prestes a gerar não interferirá em quaisquer outras configurações que você possa ter em sua instância ou em outros servidores.
 
-![Captura de tela ssh-keygen execute](images/ansible-04-01.png)
-
 Acesse o diretório `.ssh` execute o comando `ssh-keygen` 
 
 ```console
@@ -174,12 +172,13 @@ cd .ssh
 ssh-keygen
 
 ```
+![Captura de tela ssh-keygen execute](images/ansible-04-01.png)
 
 Após a execução, você poderá notar que alguns arquivos foram gerados no diretório `.ssh`
 
 ![Captura de tela ssh-keygen](images/ansible-04-14.png)
 
-Os arquivos gerados contém as chaves públicas e privadas para o usuário `ec2-user` no console `ansible`, para configurarmos essa credêncial como um acesso confiável em outras máquinas, precisamos do conteúdo da chave pública, no nosso caso, do arquivo `id_rsa.pub`
+Os arquivos gerados contém as chaves públicas e privadas para o usuário `ec2-user` no console `ansible`, para configurarmos essa credencial como um acesso confiável em outras máquinas, precisamos do conteúdo da chave pública, no nosso caso, do arquivo `id_rsa.pub`
 
 ```console
 
@@ -192,9 +191,9 @@ Copie o conteúdo do arquivo, você precisará dessa sequência de caractere par
 **Passo 4 - Troca de chaves entre servidores - Exportar Chave**
 ------------------------------------------------------------
 
-Agora que já geramos as chaves públicas e privadas de do usuário `ec2-user` do nosso console `ansible` precisamos informar essa credêncial a todos os servidores que desejamos estabelecer conexão.
+Agora que já geramos as chaves públicas e privadas do usuário `ec2-user` do nosso console `ansible` precisamos informar essa credencial a todos os servidores com os quais desejamos estabelecer conexão.
 
-Precisamos abrir uma sessão `ssh` com os servidores e verificar se temos o usuário `ec2-user` em todos os nossos `servidores`, isso facilitará a conexão, pois não precisaremos informar o usuário em cada comando que queremos executar.
+Precisamos abrir uma sessão `ssh` com os `servidores` e verificar se temos o usuário `ec2-user` em todos eles, isso facilitará a conexão, pois não precisaremos informar o usuário em cada comando que queremos executar.
 
 Em cada um de nossos `servidores` devemos ter a pasta `.ssh` para o usuário `ec2-user` nesta pasta, vamos editar o arquivo `authorized_keys` e incluir o conteúdo copiado.
 
@@ -224,7 +223,7 @@ ansible [nome do grupo] -m ping
 
 ```
 
-nessa execução os parâmetros passados são o nome do grupo de servidores que cadastramos no arquivo `/etc/ansible/hosts`, neste estudo, o grupo é `posmack`, depois adicionamos o parâmetro -m para indicar que utilizaremos um dos módulos do `ansible` para interagir com nossos `servidores` e em seguida especificamos que o módulo que queremos utilizar é p `ping`
+nessa execução os parâmetros passados são o nome do grupo de servidores que cadastramos no arquivo `/etc/ansible/hosts`, neste estudo, o grupo é `posmack`, depois adicionamos o parâmetro -m para indicar que utilizaremos um dos módulos do `ansible` para interagir com nossos `servidores` e em seguida especificamos que o módulo que queremos utilizar é o `ping`
 
 ```console
 
@@ -265,7 +264,7 @@ O `ansible` se encarrega de verificar quais são os `servidores` que fazem parte
 
 ![Captura de tela update](images/ansible-04-04.png)
 
-Reparem que, propositalmente, no caso desse exercício, os 2 `servidores` não possuiam a mesma configuração, no primeiro deles o comando de `update` verificou que todos os pacotes estavam em sua última versão, enquanto o segundo necessitou de várias atualizações, ao final, o `ansible` informa que a execução do modulo foi completada.
+Reparem que, propositalmente, no caso desse exercício, os 2 `servidores` não possuiam a mesma configuração, no primeiro deles o comando de `update` verificou que todos os pacotes estavam em sua última versão, enquanto o segundo necessitou de várias atualizações, ao final, o `ansible` informa que a execução do modulo está completa.
 
 ![Captura de tela update complete](images/ansible-04-05.png)
 
