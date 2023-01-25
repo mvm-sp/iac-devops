@@ -146,8 +146,8 @@ A partir deste momento, o `ansible` é capaz de identificar o grupo de servidore
 
 Vamos precisar indicar como o console do `ansible` vai autenticar-se em cada um dos servidores. Existem muitas formas de promovermos a autenticação entre servidores e não exploraremos todas elas, na documentação do [Ansible](Doc/01-ansible.md) você encontrará algumas formas de autenticação via linha de comando, mas para o nosso estudo, utilizaremos a autenticação por meio troca de chaves assimétricas.
 
-**Passo 3 - Troca de chaves entre servidores**
-----------------------------------------------------
+**Passo 3 - Troca de chaves entre servidores - Gerar Chave**
+------------------------------------------------------------
 
 Este também é um tema bastante extenso e não precisamos esgotar o assunto nesse exercício, vamos apenas apresentar uma forma rápida de permitir que 2 máquinas possam estabelecer um conexão por meio de uma identificação confiável entre elas.
 
@@ -160,9 +160,11 @@ Para executar o comando `ssh-keygen` recomendamos que você verifique se o seu c
 ![Captura de tela .ssh](images/ansible-04-13.png)
 
 ## Observação:
->caso este diretório não exista é bem provável que a instalação possa estar incompleta ou corrompida, sendo assim, os passos seguintes podem não fncionar corretamente. 
+>caso este diretório não exista é bem provável que a instalação possa estar incompleta ou corrompida, sendo assim, os passos seguintes podem não funcionar corretamente. 
 
 ao exibir o conteúdo do diretório, certifique-se de que exista apenas o arquivo `authorized_keys`, assim você garante que a chave que estamos prestes a gerar não interferirá em quaisquer outras configurações que você possa ter em sua instância ou em outros servidores.
+
+![Captura de tela ssh-keygen execute](images/ansible-04-01.png)
 
 Acesse o diretório `.ssh` execute o comando `ssh-keygen` 
 
@@ -176,3 +178,97 @@ ssh-keygen
 Após a execução, você poderá notar que alguns arquivos foram gerados no diretório `.ssh`
 
 ![Captura de tela ssh-keygen](images/ansible-04-14.png)
+
+Os arquivos gerados contém as chaves públicas e privadas para o usuário `ec2-user` no console `ansible`, para configurarmos essa credêncial como um acesso confiável em outras máquinas, precisamos do conteúdo da chave pública, no nosso caso, do arquivo `id_rsa.pub`
+
+```console
+
+cat id_rsa.pub
+
+```
+
+Copie o conteúdo do arquivo, você precisará dessa sequência de caractere para configurar esta credencial dentro dos seus `servidores`, aqueles que foram adicionados no arquivo de `hosts`.
+
+**Passo 4 - Troca de chaves entre servidores - Exportar Chave**
+------------------------------------------------------------
+
+Agora que já geramos as chaves públicas e privadas de do usuário `ec2-user` do nosso console `ansible` precisamos informar essa credêncial a todos os servidores que desejamos estabelecer conexão.
+
+Precisamos abrir uma sessão `ssh` com os servidores e verificar se temos o usuário `ec2-user` em todos os nossos `servidores`, isso facilitará a conexão, pois não precisaremos informar o usuário em cada comando que queremos executar.
+
+Em cada um de nossos `servidores` devemos ter a pasta `.ssh` para o usuário `ec2-user` nesta pasta, vamos editar o arquivo `authorized_keys` e incluir o conteúdo copiado.
+
+```console
+
+nano .ssh/authorized_keys
+
+```
+
+![Captura de tela authorized-keys](images/ansible-04-15.png)
+
+Devemos repetir esta operação para cada servidor de nosso inventário e executar esta exportação de chave sempre que adicionarmos uma nova máquina ao nosso inventário.
+
+**Passo 5 - Testar Conexão via ansible**
+------------------------------------------------------------
+
+Quando chegamos nesse ponto, cada endereço de nosso inventário de `servidores` deve estar acessível para executarmos os comando do `ansible`. A forma mais simples de testarmos é utilizarmos um módulo do `ansible` chamado `ping`.
+
+Existe uma diferença entre o _ping_ tradicional dos sistemas operacionais que conhecemos e o módulo `ping` do `ansible`, enquanto o comando tradicional apenas verifica se um endereço pode ser alcançado, o módulo do `ansible` verifica também se este endereço pode ser acessado pelo `ansible`, ou seja, se o `ansible` será capaz de estabelecer uma conexão estável com aquele endereço.
+
+O comando `ansible` possui parâmetros para ser executado, um deles é o módulo, a documentação mais detalhada pode ser acessada a partir desse [Repositório](Doc/01-ansible.md), aqui utilizaremos uma de suas formas mais simples de execução:
+
+
+```console
+
+ansible [nome do grupo] -m ping
+
+```
+
+nessa execução os parâmetros passados são o nome do grupo de servidores que cadastramos no arquivo `/etc/ansible/hosts`, neste estudo, o grupo é `posmack`, depois adicionamos o parâmetro -m para indicar que utilizaremos um dos módulos do `ansible` para interagir com nossos `servidores` e em seguida especificamos que o módulo que queremos utilizar é p `ping`
+
+```console
+
+ansible posmack -m ping
+
+```
+
+![Captura de tela ping](images/ansible-04-02.png)
+
+
+## Observação:
+> O `ansible` possui uma quantidade muito grande de módulos e você pode aprofundar seus estudos verificando a [documentação](https://docs.ansible.com/ansible/2.9/modules/list_of_all_modules.html) disponível no site da plataforma.
+
+
+**Passo 6 - Promovendo interações nos nosso `servidores`**
+------------------------------------------------------------
+
+Agora que garantimos que o acesso a todos os nossos `servidores` é possível, podemos começar a promover alterações que sejam comuns a todas as máquinas, Vamos usar um exemplo do dia a dia de qualquer administrador, atualizar os pacotes de instalação de todas as instâncias de um grupo ou de todo o nosso inventário.
+
+Utilizando outros [módulos](https://docs.ansible.com/ansible/2.9/modules/list_of_all_modules.html) do `ansible` temos a possibilidade de executarmos ações dentro de cada máquina a partir de nosso console `ansible` sem a necessidade de nos conectarmos manualmente com cada uma delas, vamos ao exemplo de utilização do módulo `shell`, sua [documentação](https://docs.ansible.com/ansible/2.9/modules/shell_module.html#shell-module) pode ser acessada no site da plataforma.
+
+
+```console
+
+ansible -m <nome do módulo> -a <'MODULE_ARGS'> [nome do grupo] [OPTIONS]
+
+```
+
+Como nosso exercício visa atualizar os pacotes dos `servidores` que constam no nosso grupo `posmack` precisamos executar o comando `yum update` (CentOS), vamos acrescentar a opção (OPTIONS) DE `--become` para que seja executado o comando com privilégios de `root`, desta forma, nosso comando ficaria assim:
+
+```console
+
+ansible -m shell -a 'yum update -y' posmack --become
+
+```
+
+O `ansible` se encarrega de verificar quais são os `servidores` que fazem parte do grupo `posmack`, faz a conexão com cada uma das máquinas, autentica o usuário corrente e executa o comando desejado.
+
+![Captura de tela update](images/ansible-04-04.png)
+
+Reparem que, propositalmente, no caso desse exercício, os 2 `servidores` não possuiam a mesma configuração, no primeiro deles o comando de `update` verificou que todos os pacotes estavam em sua última versão, enquanto o segundo necessitou de várias atualizações, ao final, o `ansible` informa que a execução do modulo foi completada.
+
+![Captura de tela update complete](images/ansible-04-05.png)
+
+Agora podemos explorar outras possibilidades, instalar pacotes, alterar configurações, criar ou remover dados ou recursos de nosso parque inventariado.
+
+_fonte_: _https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html#inventory-directory_ 
