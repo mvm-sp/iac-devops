@@ -6,10 +6,10 @@ O Pulumi usa Pacotes para lhe dar os blocos de construção para implantar facil
 
 
 ### Características:
-*   Utiliza linguagens de programação regulares
+*   Utiliza linguagens de programação comuns
 *   Amplo Ecossistema de Desenvolvimento
 *   Experiência de Desenvolvimento de Aplicações Modernas
-*   Infra-estrutura Unificada da Aplicação e da Pipeline
+*   Ambiente Unificado da Aplicação e da Pipeline
 
 
 ### Quando e porque eu utilizaria o Pulumi

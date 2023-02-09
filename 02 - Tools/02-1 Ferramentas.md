@@ -20,6 +20,11 @@ As ferramentas de gerenciamento de configuração e automação do Server em ger
 *   Saltstack
 *   Terraform 
 *   AWS CloudFormation
+*   Azure Resource Manager 
+*   Google Cloud Deployment Manager
+*   Crossplane
+*   Vagrant
+*   Pulumi
 
 O Ansible Automation Platform pode ser usado para provisionar sistemas operacionais e dispositivos de rede, implantar aplicações e gerenciar configurações.
 
