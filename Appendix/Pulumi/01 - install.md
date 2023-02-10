@@ -1,7 +1,7 @@
 Instalando o Pulumi
 ====================
 
-Para este tutorial, seguiremos com um instalação para ambiente Windows, para outros Sistemas Operacionais voce poderá consultar a página de [**instalação**](https://www.pulumi.com/docs/get-started/aws/begin/). Para este exemplo utilizaremos o gerenciador de pacote [**Chocolatery**](https://chocolatey.org/), Utilize o _PowerShell_ para fazer a instalação do [**Pulumi**](https://www.pulumi.com//) no Windows usando permissões elevadas para **Administrador**.
+Para este tutorial, seguiremos com uma instalação para ambiente Windows e suporte ao provedor **AWS**, para outros Sistemas Operacionais voce poderá consultar a página de [**instalação**](https://www.pulumi.com/docs/get-started/aws/begin/). Para este exemplo utilizaremos o gerenciador de pacote [**Chocolatery**](https://chocolatey.org/), Utilize o _PowerShell_ para fazer a instalação do [**Pulumi**](https://www.pulumi.com//) no Windows usando permissões elevadas para **Administrador**.
 
 Instale o [**Chocolatery**](https://chocolatey.org/install)
 -------------------------------------------------------------
@@ -12,7 +12,7 @@ Instale o [**Chocolatery**](https://chocolatey.org/install)
 *  PowerShell v2+ (o mínimo é v3 para instalação a partir deste website devido ao requisito TLS 1.2)
 *  .NET Framework 4+ (a instalação tentará instalar .NET 4.0 se não o tiver instalado) (o mínimo é 4.5 para instalar a partir deste website devido ao requisito TLS 1.2)
 
-Primeiro, assegure-se de que está a utilizando privil[egios de administrador, ao executar comandos no PowerShell, deve assegurar-se de que a _Get-ExecutionPolicy_ não é restrita. Sugerimos a utilização de _Bypass_ para contornar a política de instalação ou _AllSigned_ para obter um pouco mais de segurança.
+Primeiro, assegure-se de que está a utilizando privilégios de administrador, ao executar comandos no PowerShell, deve assegurar-se de que a _Get-ExecutionPolicy_ não é restrita. Sugerimos a utilização de _Bypass_ para contornar a política de instalação ou _AllSigned_ para obter um pouco mais de segurança.
 
 ````console
 
