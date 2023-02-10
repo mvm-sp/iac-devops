@@ -1,7 +1,7 @@
 Instalando o Pulumi
 ====================
 
-Para este tutorial, seguiremos com uma instalação para ambiente Windows e suporte ao provedor **AWS**, para outros Sistemas Operacionais voce poderá consultar a página de [**instalação**](https://www.pulumi.com/docs/get-started/aws/begin/). Para este exemplo utilizaremos o gerenciador de pacote [**Chocolatery**](https://chocolatey.org/), Utilize o _PowerShell_ para fazer a instalação do [**Pulumi**](https://www.pulumi.com//) no Windows usando permissões elevadas para **Administrador**.
+Para este tutorial, seguiremos com uma instalação para ambiente Windows e suporte ao provedor **AWS**, para outros Sistemas Operacionais voce poderá consultar a página de [**instalação**](https://www.pulumi.com/docs/get-started/aws/begin/). Para este exemplo utilizaremos o gerenciador de pacote [**Chocolatery**](https://chocolatey.org/), Utilize o _PowerShell_ para fazer a instalação do [**Pulumi**](https://www.pulumi.com/) no Windows usando permissões elevadas para **Administrador**.
 
 Instale o [**Chocolatery**](https://chocolatey.org/install)
 -------------------------------------------------------------
@@ -27,7 +27,7 @@ Cole o texto copiado na sessão do _PowerShell_ e pressione <Enter>, aguarde alg
 choco -?
 
 ````
-Com o [**Chocolatery**](https://chocolatey.org/) instalado, o pacote do [**Pulumi**](https://www.pulumi.com//) pode ser configurado em sua máquina através do comando:
+Com o [**Chocolatery**](https://chocolatey.org/) instalado, o pacote do [**Pulumi**](https://www.pulumi.com/) pode ser configurado em sua máquina através do comando:
 
 ````console
 
