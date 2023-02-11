@@ -1,8 +1,8 @@
 Pulumi
 -------------------------------
 
-Pulumi é uma infra-estrutura open source, e funciona melhor com o Serviço Pulumi para tornar a gestão da infra-estrutura segura, confiável, e sem complicações.Pulumi ajuda os programadores e as equipas de infra-estruturas a colaborar e a domar a complexidade da nuvem.
-O Pulumi usa Pacotes para lhe dar os blocos de construção para implantar facilmente infra-estruturas com TypeScript/JavaScript, Python, Go, e C#. Fornece recursos de cloud superiores e fornecedores de SaaS para construir infra-estruturas  que satisfaçam as suas necessidades. Para arquiteturas populares como Kubernetes ou serverless.
+Pulumi é uma infra-estrutura open source, e funciona melhor com o Serviço Pulumi para tornar a gestão da infra-estrutura segura, confiável, e sem complicações.Pulumi ajuda os programadores e as equipes de infra-estruturas a colaborar e a gerenciar a complexidade da nuvem.
+O Pulumi usa Pacotes para fornecer os blocos de construção para implantar facilmente infra-estruturas com TypeScript/JavaScript, Python, Go, e C#. Fornece recursos de cloud superiores e fornecedores de SaaS para construir infra-estruturas  que satisfaçam as suas necessidades. Para arquiteturas populares como Kubernetes ou serverless.
 
 
 ### Características:

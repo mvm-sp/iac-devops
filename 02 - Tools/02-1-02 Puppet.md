@@ -6,7 +6,7 @@ O **Puppet** é uma ferramenta de gerenciamento de configurações de sistemas U
 Características:
 ----------------
 
-*   Serveres Multi-Master
+*   Servers Multi-Master
 *   Arquitetura Agent to Master;
 *   Suporta segregação de Ambientes (Prod/Homolog/Dev);
 *   Comunicação segura SSL;
@@ -17,7 +17,7 @@ Características:
 
 O puppet é uma ferramenta sensacional para gerenciar um datacenter ou um parque de workstations, por possuir recursos como o **runinterval** em que a configuração é aplicada diversas vezes de acordo com a configuração de intervalo configurada e caso o Server esteja indisponível o agente não para de tentar aplicar a configuração do mesmo, uma vez que ele não precise receber algum arquivo do Server que esteja indisponível.
 
-O Puppet trabalha com a arquitetura multi-master, onde todos os Serveres instalados e configurados na rede trabalham em tempo integral, diferente de ferramentas como o Chef que utiliza Serveres primários e backups.
+O Puppet trabalha com a arquitetura multi-master, onde todos os Servers instalados e configurados na rede trabalham em tempo integral, diferente de ferramentas como o Chef que utiliza Servers primários e backups.
 
 Outra grande vantagem do puppet é que ele funciona em ambientes Unix e Microsoft nativamente através da instalação do Puppet Agent.
 

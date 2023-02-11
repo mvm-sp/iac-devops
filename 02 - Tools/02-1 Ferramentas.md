@@ -44,7 +44,7 @@ Geralmente, Ansible, Puppet, SaltStack e Chef são considerados ferramentas de g
 Configuration orchestration
 ---------------------------
 
-Ferramentas como o Terraform e CloudFormation são consideradas orquestradores. Eles são projetados para provisionar as próprias instâncias do Server, deixando o trabalho de configuração desses Serveres para outras ferramentas. A orquestração atende ao requisito de provisionar ambientes em um nível mais alto do que o gerenciamento de configuração. O foco aqui é coordenar a configuração em ambientes e clusters complexos.
+Ferramentas como o Terraform e CloudFormation são consideradas orquestradores. Eles são projetados para provisionar as próprias instâncias do Server, deixando o trabalho de configuração desses Servers para outras ferramentas. A orquestração atende ao requisito de provisionar ambientes em um nível mais alto do que o gerenciamento de configuração. O foco aqui é coordenar a configuração em ambientes e clusters complexos.
 
 
 ![IaC toos -  compare tools](images/compare-tools.png)

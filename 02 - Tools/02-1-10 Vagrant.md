@@ -7,7 +7,7 @@ Vagrant é uma ferramenta para a construção de ambientes de desenvolvimento co
 ### Características:
 *   Faciita o set up de uma VM e pode salvar as configurações na própria imagem
 *   Permite compartilhamento de configurações entre Maquinas Virtuais
-*   Trabalha com outras ferramentas como VirtualBox, algumma ferramenta de IAC ou qualquer provedor de Cloud
+*   Trabalha com outras ferramentas como VirtualBox, alguma ferramenta de IAC ou qualquer provedor de Cloud
 
 
 ### Quando e porque eu utilizaria o Vagrant
