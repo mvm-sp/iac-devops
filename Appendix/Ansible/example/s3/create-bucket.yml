@@ -1,0 +1,12 @@
+- hosts: localhost
+  tasks:
+  - name: Create the S3 bucket
+    amazon.aws.s3_bucket:
+      name: ansible-bucket-posmack
+      state: present
+  - name: Upload file
+    aws_s3:
+      bucket: ansible-bucket-posmack
+      object: index.html
+      src: "./files/index.html"
+      mode: put      

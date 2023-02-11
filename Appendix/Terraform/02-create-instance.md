@@ -35,7 +35,7 @@ Copie Change no diretório.
     
 Copiar Crie um arquivo para definir sua infraestrutura.
 
-     $ toque em main.tf
+     $ touch main.tf
 
 Abra main.tf em seu editor de texto, cole a configuração abaixo e salve o arquivo.
 
