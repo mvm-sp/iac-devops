@@ -1,10 +1,10 @@
-O que é o Ansible?? 
+O que é o Ansible?
 --------------------------------------------------
 
 O Ansible é uma ferramenta de código aberto para de automação de rotinas de TI usada para configurar, gerenciar e provisionar servidores, redes e outros recursos de computação. Ele permite que os administradores de sistema automatizem tarefas repetitivas e demoradas, tais como instalação de software, atualizações de sistema operacional, configuração de serviços de rede e provisionamento de infraestrutura de nuvem. O Ansible usa uma linguagem imperativa simples e uma arquitetura baseada em _agentless_, portanto não é necessário instalar software adicional nos servidores alvo para que a automação seja executada. O Ansible é amplamente utilizado em ambientes de produção, desde pequenas startups até grandes empresas, devido à sua simplicidade, flexibilidade e escalabilidade.
 
 
-Qual a Utiidade do Ansible?? 
+Qual a Utiidade do Ansible?
 --------------------------------------------------
 
 O Ansible é um mecanismo de automação de TI open source para automação de processos como [provisionamento](https://www.redhat.com/pt-br/topics/automation/what-is-provisioning), [gerenciamento de configurações](https://www.redhat.com/pt-br/topics/automation/what-is-configuration-management), implantação de aplicações, [orquestração](https://www.redhat.com/pt-br/topics/automation/what-is-orchestration) e muitos outros.
