@@ -1,5 +1,6 @@
 O que é o Ansible?? 
 --------------------------------------------------
+
 O Ansible é uma ferramenta de código aberto para de automação de rotinas de TI usada para configurar, gerenciar e provisionar servidores, redes e outros recursos de computação. Ele permite que os administradores de sistema automatizem tarefas repetitivas e demoradas, tais como instalação de software, atualizações de sistema operacional, configuração de serviços de rede e provisionamento de infraestrutura de nuvem. O Ansible usa uma linguagem imperativa simples e uma arquitetura baseada em _agentless_, portanto não é necessário instalar software adicional nos servidores alvo para que a automação seja executada. O Ansible é amplamente utilizado em ambientes de produção, desde pequenas startups até grandes empresas, devido à sua simplicidade, flexibilidade e escalabilidade.
 
 
@@ -33,7 +34,7 @@ Você pode usar os [módulos integrados](https://docs.ansible.com/ansible/2.8/mo
 [Dez módulos do Ansible para iniciantes](https://opensource.com/article/19/9/must-know-ansible-modules)
 
 
-Como usar o Ansible para comandos ad-hoc
+CLI do Ansible
 ----------------------------------------
 
 O Ansible também pode ser usado para executar comandos ad-hoc. Para isso, execute um comando ou chame um módulo diretamente da linha de comando. Não é preciso usar um playbook. Para uma tarefa única, isso não é um problema. Já para comandos mais complexos, é necessário usar um [Ansible playbook](https://www.redhat.com/pt-br/topics/automation/what-is-an-ansible-playbook).
