@@ -16,6 +16,13 @@ ansible webservers -m service -a "name=httpd state=started"   #Inicia o serviço
 * [ansible-config](../Appendix/Ansible/Doc/02-ansible-config.md) 
   este grupo permite que você possa alterar parâmetros de execução e de ambiente para uma determinada operação, como por exemplo aumentar o nível do _verbose_ em um conjuno de comandos críticos
 
+```console
+
+ansible-config init --disabled > teste.cfg           #Gera um arquivo de configurações com o conteúdo comentado
+
+ansible-config init --disabled -t all > ansible.cfg  #Gera um arquivo de configurações com o conteúdo comentado e os módulos disponíveis
+
+```
 
 
 * [ansible-console](../Appendix/Ansible/Doc/03-ansible-console.md)
