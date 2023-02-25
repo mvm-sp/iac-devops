@@ -1,7 +1,7 @@
 Azure Resource Manager 
 ----------------------
 
-O Azure Resource Manager é o serviço de implantação e gestão do Azure. Fornece uma camada de gestão que lhe permite criar, actualizar, e eliminar recursos na sua conta Azure. Utiliza funcionalidades de gestão, como controlo de acesso, bloqueios e etiquetas, para proteger e organizar os seus recursos após a implantação.
+O Azure Resource Manager é o serviço de implantação e gestão do Azure. Fornece uma camada de gestão que lhe permite criar, actualizar, e eliminar recursos na sua conta Azure. Utiliza funcionalidades de gestão, como controle de acesso, bloqueios e etiquetas, para proteger e organizar os seus recursos após a implantação.
 
 ### Características:
 *   possui templates otimizados para Azure
