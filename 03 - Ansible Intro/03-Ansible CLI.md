@@ -16,13 +16,7 @@ ansible webservers -m service -a "name=httpd state=started"   #Inicia o serviço
 * [ansible-config](../Appendix/Ansible/Doc/02-ansible-config.md) 
   este grupo permite que você possa alterar parâmetros de execução e de ambiente para uma determinada operação, como por exemplo aumentar o nível do _verbose_ em um conjuno de comandos críticos
 
-  ```console
 
-ansible-config init --disabled > teste.cfg           #Gera um arquivo de configurações com o conteúdo comentado
-
-ansible-config init --disabled -t all > ansible.cfg  #Gera um arquivo de configurações com o conteúdo comentado e os módulos disponíveis
-
-```
 
 * [ansible-console](../Appendix/Ansible/Doc/03-ansible-console.md)
   Ele permite a execução em tempo real de módulos Ansible ou comandos arbitrários. Assim como o Ansible normal, as conexões com os hosts são feitas via SSH e a configuração segue as práticas padrão do Ansible, possui a capacidade de  `--limit <by-tag>` como por exemplo  `--limit masters`, e você pode começar a ver porque ansible-console é tão poderosa.
@@ -32,6 +26,7 @@ ansible-config init --disabled -t all > ansible.cfg  #Gera um arquivo de configu
 ansible-console -i hosts --become -u root     #Acessa o console do ansible utiizando um inventário específico e credenciais de root
 
 ```
+
 * [ansible-doc](../Appendix/Ansible/Doc/04-ansible-doc.md) 
   O comando ansible-doc tem uma função - fornecer documentação para o Ansible. Ele cobre principalmente os módulos principais do Ansible, dos quais você pode encontrar uma lista completa executando o comando `ansible-doc --list`
 
@@ -48,6 +43,7 @@ ansible-doc add_host    #exibe a documentação do módulo add_host do ansible
 
 ansible-galaxy install geerlingguy.mysql         #instala a collection geerlingguy.mysql no ambiente de desenvolvimento
 ansible-galaxy remove geerlingguy.mysql          #Remove a collection geerlingguy.mysql no ambiente de desenvolvimento 
+
 ```
 
 * [ansible-inventory](../Appendix/Ansible/Doc/06-ansible-inventory.md)
@@ -82,8 +78,8 @@ ansible-pull -U https://git.example.com/test.git       #Baixa um repositório a 
 * [ansible-vault](../Appendix/Ansible/Doc/09-ansible-vault.md)
   pode criptografar qualquer arquivo de dados estruturado utilizado pelo Ansible. Isto pode incluir variáveis group_vars/ ou host_vars/ inventário, variáveis carregadas por include_vars ou vars_files, ou arquivos de variáveis passados na linha de comando do ansible-playbook com `-e @file.yml` ou `-e @file.json`. Variáveis de função e defaults também estão incluídas! Se você não gostaria de expor quais variáveis você está usando, você pode manter um arquivo de tarefas individuais totalmente criptografado.
 
-  ```console
+```console
 
 ansible-vault view vault.yml     #permite a visualização de um arquivo criptografado pelo ansible-vault create
 
-  ```
+```
