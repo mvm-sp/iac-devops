@@ -16,19 +16,19 @@ Onde `playbook.yml` é o arquivo YAML que contém as instruções para o Ansible
 
 
 
-${-i \space INVENTORY}$: especifica o arquivo de inventário do Ansible que lista os hosts gerenciados pelo Ansible. Por exemplo:
++ ${-i \space INVENTORY}$: especifica o arquivo de inventário do Ansible que lista os hosts gerenciados pelo Ansible. Por exemplo:
 ansible-playbook playbook.yml -i hosts.
 
-${-e \space  EXTRA-VARS}$: especifica variáveis extras a serem passadas para o playbook. Por exemplo: 
++ ${-e \space  EXTRA-VARS}$: especifica variáveis extras a serem passadas para o playbook. Por exemplo: 
 ansible-playbook playbook.yml -e "var1=value1 var2=value2".
 
-${-l \space  LIMIT}$: limita a execução do playbook a um subconjunto de hosts no inventário. Por exemplo: 
++ ${-l \space  LIMIT}$: limita a execução do playbook a um subconjunto de hosts no inventário. Por exemplo: 
 ansible-playbook playbook.yml -l webservers.
 
-${-t \space  TAGS}$: especifica as tags das tarefas a serem executadas no playbook. Por exemplo:
++ ${-t \space  TAGS}$: especifica as tags das tarefas a serem executadas no playbook. Por exemplo:
 ansible-playbook playbook.yml -t setup.
 
-${--check}$: executa o playbook em modo de simulação, sem fazer alterações nos hosts gerenciados.
++ ${--check}$: executa o playbook em modo de simulação, sem fazer alterações nos hosts gerenciados.
 
 ## Exemplos de utilização
 
@@ -84,4 +84,6 @@ ansible-playbook playbook.yml --check
 
 ```
 Esses são apenas alguns exemplos básicos de utilização do comando ansible-playbook. Com o Ansible, é possível criar playbooks YAML complexos e executá-los em grandes conjuntos de hosts gerenciados, automatizando várias tarefas de configuração e implantação de aplicativos em infraestruturas de TI.
+
+Em resumo, o comando ansible-playbook é essencial para a execução de tarefas automatizadas em um conjunto de hosts usando o Ansible. Ele permite especificar os arquivos de inventário, limitar a execução a hosts específicos, definir variáveis, tags e outras opções úteis para personalizar a execução do playbook.
 
