@@ -82,3 +82,11 @@ ansible-playbook playbook.yml --check
 
 ```
 Esses são apenas alguns exemplos básicos de utilização do comando ansible-playbook. Com o Ansible, é possível criar playbooks YAML complexos e executá-los em grandes conjuntos de hosts gerenciados, automatizando várias tarefas de configuração e implantação de aplicativos em infraestruturas de TI.
+
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
+```
