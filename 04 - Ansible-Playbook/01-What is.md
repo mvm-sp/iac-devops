@@ -16,7 +16,7 @@ Onde `playbook.yml` é o arquivo YAML que contém as instruções para o Ansible
 
 ${\color{red}Welcome \space \color{lightblue}To \space \color{orange}Stackoverflow}$
 
-${\color{red}-i \space INVENTORY}$: especifica o arquivo de inventário do Ansible que lista os hosts gerenciados pelo Ansible. Por exemplo:
+${-i \space INVENTORY}$: especifica o arquivo de inventário do Ansible que lista os hosts gerenciados pelo Ansible. Por exemplo:
 ansible-playbook playbook.yml -i hosts.
 
 -e EXTRA_VARS: especifica variáveis extras a serem passadas para o playbook. Por exemplo: 
