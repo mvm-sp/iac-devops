@@ -4,7 +4,7 @@ CLI do Ansible
 O Ansible possui uma vasta coleção de comandos CLI (_Command Line Interface_) para execução de tarefas e configurações de _pipelines_ e ambientes, você pode acessar detalhes nas páginas desse repositorio
 
 * [ansible](../Appendix/Ansible/Doc/01-ansible.md) : 
-  automatiza uma única tarefa em um ou mais hosts. comandos ad hoc são rápidos e fáceis, mas não são reutilizáveis. Os comandos ad hoc demonstram a simplicidade e o poder do Ansible. Os conceitos aqui aprendidos serão retratados directamente para a linguagem do livro de jogo. são ótimos para tarefas que você repete raramente. Por exemplo, se você quiser desligar todas as máquinas em seu laboratório para as férias de Natal, você poderia executar um rápido comando em Ansible sem escrever um playbook complexo.
+  automatiza uma única tarefa em um ou mais hosts. comandos ad hoc são rápidos e fáceis, mas não são reutilizáveis. Os comandos ad hoc demonstram a simplicidade e o poder do Ansible. Os conceitos aqui aprendidos serão retratados diretamente para a linguagem do playbook, ele é ótimo para tarefas que você repete raramente. Por exemplo, se você quiser desligar todas as máquinas em seu laboratório para as férias de Natal, você poderia executar um rápido comando em Ansible sem escrever um playbook complexo.
 
 ```console   
 
@@ -35,7 +35,7 @@ ansible-console -i hosts --become -u root     #Acessa o console do ansible utiiz
 ```
 
 * [ansible-doc](../Appendix/Ansible/Doc/04-ansible-doc.md) 
-  O comando ansible-doc tem uma função - fornecer documentação para o Ansible. Ele cobre principalmente os módulos principais do Ansible, dos quais você pode encontrar uma lista completa executando o comando `ansible-doc --list`
+  O comando ansible-doc tem uma função, fornecer documentação para o Ansible. Ele cobre principalmente os módulos principais do Ansible, dos quais você pode encontrar uma lista completa executando o comando `ansible-doc --list`
 
 ```console
 
