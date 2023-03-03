@@ -14,7 +14,7 @@ ansible-playbook playbook.yml
 
 Onde `playbook.yml` é o arquivo YAML que contém as instruções para o Ansible. Algumas das opções mais comuns do comando ansible-playbook incluem:
 
--i INVENTORY: especifica o arquivo de inventário do Ansible que lista os hosts gerenciados pelo Ansible. Por exemplo:
+$${\color{red}-i INVENTORY}$$: especifica o arquivo de inventário do Ansible que lista os hosts gerenciados pelo Ansible. Por exemplo:
 ansible-playbook playbook.yml -i hosts.
 
 -e EXTRA_VARS: especifica variáveis extras a serem passadas para o playbook. Por exemplo: 
@@ -83,10 +83,3 @@ ansible-playbook playbook.yml --check
 ```
 Esses são apenas alguns exemplos básicos de utilização do comando ansible-playbook. Com o Ansible, é possível criar playbooks YAML complexos e executá-los em grandes conjuntos de hosts gerenciados, automatizando várias tarefas de configuração e implantação de aplicativos em infraestruturas de TI.
 
-```diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
-```
