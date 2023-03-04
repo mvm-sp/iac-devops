@@ -23,7 +23,7 @@ Exemplo de arquivo YAML:
 # Exemplo de arquivo YAML
 id: 100
 nome: Maria
-idade: 30
+idade: 25
 habilidades:
   - C#
   - Ansible

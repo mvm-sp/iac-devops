@@ -11,4 +11,11 @@ Crie um diretório `posmack/labs/lab01` e nesse diretório crie um arquivo de `h
 ansible -i hosts all -m ping
 
 ```
+Verifique as configurações de seus servidores:
 
+```console
+
+ansible all -i hosts -m setup -i ansible_hosts -a 'filter=ansible_distribution,ansible_distribution_version,ansible_memfree_mb,ansible_memtotal_mb,ansible_processor_cores*,ansible_architecture' 
+
+
+```

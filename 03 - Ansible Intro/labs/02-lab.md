@@ -23,36 +23,36 @@ Assim você terá que instalar o pacote `nginx` que é um serviço HTTP disponí
 
 ```console
 
-ansible webservers -i hosts -m shell -a 'yum install nginx' --become
+ansible all -i hosts -m shell -a 'yum install nginx' --become
 
 ```
 
 >Observação
->Este é o comando básico para execução da instalação do pacote em servidoresem distribuições padrão, imagens da AWS podem apresentar a seguinte mensagem:
+>Este é o comando básico para execução da instalação do pacote em servidores em distribuições padrão, imagens da AWS podem apresentar a seguinte mensagem:
 
 >_nginx is available in Amazon Linux Extra topic "nginx1"_
 
 ![AWS-package-error](images/labs-01-01.png)
 
-para que a instalação seja em imagens específicas, verifique o comando correto para o cenário específico, neste caso:
+para que a instalação seja feita em imagens específicas, verifique o comando correto para o cenário específico, neste caso:
 
 >amazon-linux-extras install nginx1
 
 ```css
 
-ansible webservers -i hosts -m ansible.builtin.shell -a 'yum amazon-linux-extras install nginx1' --become
+ansible all -i hosts -m ansible.builtin.shell -a 'yum amazon-linux-extras install nginx1' --become
 
 ```
 
 o pacote deverá ser instalado:
 
-![AWS-package-error](images/labs-01-02.png)
+![AWS-package-sucess](images/labs-01-02.png)
 
 você poderá verificar através do comando:
 
 ```css
 
-ansible webservers -i hosts -m package -a 'name=nginx state=present' --become
+ansible all -i hosts -m package -a 'name=nginx state=present' --become
 
 ```
 
@@ -62,6 +62,11 @@ com o serviço instalado você precisará iniciá-lo:
 
 ```css
 
-ansible webservers -i hosts -m service -a "name=nginx state=started enabled=yes" --become
+    ansible all -i hosts -m service -a "name=nginx state=started enabled=yes" --become
 
 ```
+
+faça o teste usando o protocolo HTTP (o protocolo HTTPS necessitará de um certificado que não foi provisionado nesse exercício) e seu endereço de IP público:
+
+![AWS-nginx-sucess](images/labs-01-02.png)
+
