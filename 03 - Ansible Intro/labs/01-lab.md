@@ -15,7 +15,7 @@ Verifique as configurações de seus servidores:
 
 ```console
 
-ansible all -i hosts -m setup -i ansible_hosts -a 'filter=ansible_distribution,ansible_distribution_version,ansible_memfree_mb,ansible_memtotal_mb,ansible_processor_cores*,ansible_architecture' 
+ansible all -i hosts -m setup -a 'filter=ansible_distribution,ansible_distribution_version,ansible_memfree_mb,ansible_memtotal_mb,ansible_processor_cores*,ansible_architecture' 
 
 
 ```
