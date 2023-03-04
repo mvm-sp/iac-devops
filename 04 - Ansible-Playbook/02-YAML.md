@@ -21,7 +21,7 @@ Exemplo de arquivo YAML:
 
 ```yaml
 # Exemplo de arquivo YAML
-id_cliente: 100
+id: 100
 nome: Maria
 idade: 30
 habilidades:
@@ -30,4 +30,4 @@ habilidades:
   - MySQL
 ```
 
-Neste exemplo, temos um mapeamento com quatro chaves: `id_cliente`, `nome`, `idade` e `habilidades`. A chave `habilidades` contém uma sequência com três itens. Todos os valores são escalares, exceto a sequência de habilidades, que é uma sequência de itens.
+Neste exemplo, temos um mapeamento com quatro chaves: `id`, `nome`, `idade` e `habilidades`. A chave `habilidades` contém uma sequência com três itens. Todos os valores são escalares, exceto a sequência de habilidades, que é uma sequência de itens.
