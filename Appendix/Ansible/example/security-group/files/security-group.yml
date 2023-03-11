@@ -1,0 +1,16 @@
+- name: ec2 security group template
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: example using security group rule descriptions
+    amazon.aws.ec2_security_group:
+      name: ansible-sg
+      description: sg to ansible hosts
+      vpc_id: vpc-6f139812
+      region: us-east-1
+      rules:
+        - proto: tcp
+          ports:
+          - 80
+          cidr_ip: 0.0.0.0/0
+          rule_desc: allow all on port 80
