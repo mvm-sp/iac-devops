@@ -29,7 +29,7 @@ A integração contínua tenta evitar tudo isso, incentivando pequenas e freqüe
 
 CD (continuous deployment)
 ----------------------------------------------
-A implantação contínua significa que as mudanças de código são automaticamente implantadas/liberadas em um ambiente de teste ou produção assim que elas são submetidas ao repositório. Isto é freqüentemente alternado com a entrega contínua e isto porque são muito semelhantes. A única diferença é que na entrega contínua, a intervenção humana (por exemplo, o clique de um botão) é necessária para que as mudanças sejam liberadas. Entretanto, na distribuição contínua, tudo acontece automaticamente. 
+A implantação contínua significa que as mudanças de código são "automaticamente" implantadas/liberadas em um ambiente de teste ou produção assim que elas são submetidas ao repositório. Isto é freqüentemente alternado com a entrega contínua e isto porque são muito semelhantes. A única diferença é que na entrega contínua, a intervenção humana (por exemplo, o clique de um botão) é necessária para que as mudanças sejam liberadas. Entretanto, na distribuição contínua, tudo acontece automaticamente. 
 
 Vantagens na utilização do conceito CI/CD
 -------------------------------------------------
