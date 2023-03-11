@@ -39,7 +39,7 @@ agora vamos completar nossa instalação com os pacotes de _linting_ do `ansible
 
 ```css
 
-molecule --version
+pip3 install yamllint ansible-lint
 
 ```
 
