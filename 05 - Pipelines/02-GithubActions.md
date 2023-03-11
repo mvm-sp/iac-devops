@@ -1,9 +1,9 @@
 Github Actions
 =======================================================
 
-De acordo com a [documentação](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions) da GitHub Actions, "GitHub Actions é uma plataforma de integração e entrega contínua (CI/CD) que permite automatizar sua construção, teste e distribuição de dutos. Você pode criar fluxos de trabalho que constroem e testam cada solicitação de pull para seu repositório, ou implantar solicitações de pull fundidas para a produção".
+De acordo com a [documentação](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions) da GitHub Actions, "GitHub Actions é uma plataforma de integração e entrega contínua (CI/CD) que permite automatizar sua construção, teste e distribuição de fluxos. Você pode criar fluxos de trabalho que constroem e testam cada solicitação de `pull` para seu repositório, ou implantar solicitações de `pull` fundidas para a produção".
 
-Isto significa que com o GitHub Actions, você pode configurar dutos CI/CD que funcionam quando certas ações são tomadas em um repositório. Você pode decidir executar testes para cada solicitação pull (PR) criada ou fundida, você pode automaticamente implantar PR fundida, e você pode até mesmo configurar um fluxo de trabalho para adicionar as etiquetas apropriadas quando um PR é criado.
+Isto significa que com o GitHub Actions, você pode configurar fluxos CI/CD que funcionam quando certas ações são tomadas em um repositório. Você pode decidir executar testes para cada solicitação `pull` (PR) criada ou _mergeada_, você pode automaticamente implantar PR, e você pode até mesmo configurar um fluxo de trabalho para adicionar as etiquetas apropriadas quando um PR é criado.
 
 Configurando Github Actions
 --------------------------------------------
