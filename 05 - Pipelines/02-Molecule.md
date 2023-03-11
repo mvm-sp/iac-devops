@@ -1,7 +1,7 @@
 Ansible `Molecule`
 =======================================================
 
-O projeto `Molecule` foi criado para ajudar no desenvolvimento e teste de papéis Ansible.
+O projeto `Molecule` foi criado para ajudar no desenvolvimento e testes em Ansible.
 
 `Molecule` fornece suporte para testes com múltiplas instâncias, sistemas operacionais e distribuições, fornecedores de virtualização, estruturas de teste e cenários de teste.
 
