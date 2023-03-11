@@ -38,10 +38,10 @@ Uma ótima maneira de construir códigos de infra estrutura bem documentados é 
 
 ```
 
-Observando o arquivo podemos ver que todas as variáveis estão agrupadas no bloco `vars:`, dessa forma
+Observando o arquivo podemos ver que todas as variáveis estão agrupadas no bloco `vars:`, dessa forma podemos organizar e centralizar todas as informações que necessitamosalterar para que nosso `playbook` possa ser executado.
 
 
-Agora vamos aplicar o playbook de configuração para essa nova instância para termos nosso Webserver configurado, o `yaml` deve se parecer com esse:
+Agora vamos aplicar o playbook de configuração do nginx para essa nova instância para termos nosso Webserver configurado, o `yaml` deve se parecer com esse:
 
 ```yaml
 

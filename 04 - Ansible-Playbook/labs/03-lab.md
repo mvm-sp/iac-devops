@@ -1,9 +1,9 @@
 Criando um security group
 ==========================================================================================================================================
 
-Nos exercícios anteriores provisionamos instâncias EC2 que possuiam um serviço `nginx` configurado com uma página personalizada, agora vamos tentar provisionar um outro recurso, um security group, você provavelmente já conhece este recurso, ma caso queira saber um pouco mais, pode acessar a documentação oficial [AWS Security Groups](https://docs.aws.amazon.com/pt_br/AWSEC2/latest/UserGuide/ec2-security-groups.html).
+Nos exercícios anteriores provisionamos instâncias EC2 que possuiam um serviço `nginx` configurado com uma página personalizada, agora vamos tentar provisionar um outro recurso, um `security group`, você provavelmente já conhece este recurso, ma caso queira saber um pouco mais, pode acessar a documentação oficial [AWS Security Groups](https://docs.aws.amazon.com/pt_br/AWSEC2/latest/UserGuide/ec2-security-groups.html).
 
-Como você já sabe o provisionamento de um recurso via `ansible` pode ser feita via `playbook` e precisamo conhecer o módulo que desejamos utilizar para esse provisionamento, no nosso caso, o `sg`
+Como você já sabe o provisionamento de um recurso via `ansible` pode ser feita via `playbook` e precisamos conhecer o módulo que desejamos utilizar para esse provisionamento, no nosso caso, o `amazon.aws.ec2_security_group`
 
 ```yaml
 
@@ -26,7 +26,7 @@ Como você já sabe o provisionamento de um recurso via `ansible` pode ser feita
 
 ```
 
-Este `security group` irá provisionar um novo grupo habilitando a porta 80 para o protocolo `tcp`, altere os valores de sua `region` e `vpc_id` e salve noarquivo `security-group.yml`, depis execute o comando:
+Este `security group` irá provisionar um novo grupo habilitando a porta 80 para o protocolo `tcp`, altere os valores de sua `region` e `vpc_id` e salve o arquivo `security-group.yml`, depois execute o comando:
 
 ```css
 

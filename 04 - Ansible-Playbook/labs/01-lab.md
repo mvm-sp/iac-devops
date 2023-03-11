@@ -49,7 +49,7 @@ Entretanto, se você estiver com uma versão da `collection` superior a v4.0.0, 
 então desafio é:
 
 * Atualizar a versão da collection para a versão mais recente
-* Alterar o `playbook` proposto para que ele passe a utilzar o novo módulo de creação de instâncias da `AWS` que é o `amazon.aws.ec2_instance`
+* Alterar o `playbook` proposto para que ele passe a utilzar o novo módulo de criação de instâncias da `AWS` que é o `amazon.aws.ec2_instance`
 
 >Algumas dicas são importantes, o módulo sofreu algumas alterações estruturais, portanto, uma simples alteração neste parâmetro de seu `yaml` não irá funcionar. Sendo assim, verifique a documentação disponível em [amazon.aws.ec2_instance](https://docs.ansible.com/ansible/latest/collections/amazon/aws/ec2_instance_module.html) ou utilize a própria documentação do `ansible` disponível em seu console:
 
