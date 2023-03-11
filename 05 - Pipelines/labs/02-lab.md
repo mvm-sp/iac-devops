@@ -120,9 +120,9 @@ Como o seu repositório, provavelmente, é público alguns cuidados de seguranç
 
 ![detalhe](../images/05-01-08.png)
 
-Para corrigir o problema, seria necessário que estas informações estivessem presentes no momento da execução da pipe, existem formas seguras de fornecer informações sensíveis, mas a recomendação é que projetos que requeiram esta categoria de dado sejam privados, aumentando a sua segurança.
+Para corrigir o problema, seria necessário que estas informações estivessem presentes no momento da execução da pipe e existem formas seguras de fornecer informações sensíveis, mas a recomendação é que projetos que requeiram esta categoria de dado sejam privados, aumentando a sua segurança.
 
-No nosso caso, vamosutiizar outra altrnativa para termos sucesso na pipe,, verificando o erro, vemos que o probema está no arquivo `molecule/default/converge.yml`, vamos editar este arquivo para deixá-lo menos exigente:
+No nosso caso, vamos utiizar outra alternativa para termos sucesso na pipe,, verificando o erro, vemos que o probema está no arquivo `molecule/default/converge.yml`, vamos editar este arquivo para deixá-lo menos exigente:
 
 ```yaml
 ---
@@ -143,7 +143,7 @@ Faça o `push` novamente e veja o que acontece
 
 ![Sucesso](../images/05-01-09.png)
 
-Agora você pode explorar mas recursos de sua `pipeline` como por exemplo, adicionar cenários para ela:
+Agora você pode explorar mais recursos de sua `pipeline` como por exemplo, adicionar cenários para ela:
 
 ```yaml
 ---
@@ -210,4 +210,4 @@ Faça outro `push` para verificar o resultado:
 
 ![Varios Cenários](../images/05-01-10.png)
 
-É isso1 Agora é só continuar seus estudos no `Github Actions` ou em outra ferramenta que preferir.
+É isso! Agora é só continuar seus estudos no `Github Actions` ou em outra ferramenta que preferir.
