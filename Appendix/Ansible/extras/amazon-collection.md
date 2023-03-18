@@ -1,3 +1,4 @@
+```css
 /home/user/.ansible/collections/ansible_collections/amazon
 └── aws
     ├── CHANGELOG.rst
@@ -1239,3 +1240,4 @@
     │       └── utils
     │           └── amazon_placebo_fixtures.py
     └── tox.ini
+```
