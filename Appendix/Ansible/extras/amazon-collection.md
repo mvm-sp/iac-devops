@@ -1,4 +1,4 @@
-/home/mvm/.ansible/collections/ansible_collections/amazon
+/home/user/.ansible/collections/ansible_collections/amazon
 └── aws
     ├── CHANGELOG.rst
     ├── CONTRIBUTING.md
