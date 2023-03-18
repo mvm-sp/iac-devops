@@ -1,7 +1,7 @@
 Ansible Galaxy
 =======================================================
 
-Ansible Galaxy é essencialmente um grande repositório público de `collections` para `Ansible`. As `collections` possuem `roles` que são enviados com READMEs que detalham o uso da `collection` e as variáveis disponíveis. O Galaxy contém um grande número de funções que estão em constante evolução. O Galaxy pode usar o GitHub para adicionar outras fontes de funções, como o GitHub
+Ansible Galaxy é essencialmente um grande repositório público de `collections` para `Ansible`. As `collections` possuem `roles` que são enviados com [READMEs](../Appendix/Ansible/extras/nginx-role-README.md) que detalham o uso da `collection` e as variáveis disponíveis. O Galaxy contém um grande número de funções que estão em constante evolução. O Galaxy pode usar o GitHub para adicionar outras fontes de funções, como o GitHub
 
 O Ansible Galaxy refere-se ao website [Galaxy](https://galaxy.ansible.com/), um site gratuito para encontrar, baixar e compartilhar `collections` desenvolvidos pela comunidade.
 
@@ -37,4 +37,6 @@ Os plugins são peças de código que aumentam a funcionalidade central do Ansib
 
 Os plugins oferecem opções e extensões para as principais características do Ansible: transformação de dados, registro de saída, conexão ao inventário, e muito mais. Os módulos são um tipo de plugin que executam tarefas de automação em um `host` (geralmente um sistema remoto).
 
+**Benefícios do Galaxy**
+--------------------------------------------------
 Como o Galaxy possui um vasto conjunto de soluções, você pode utilizar e contribuir com o repositório, tornando o dia-a-dia do administrador mais produtivo, saiba mais explorando a [documentação](https://docs.ansible.com/ansible/latest/galaxy/user_guide.html) de utilização do Galaxy.
