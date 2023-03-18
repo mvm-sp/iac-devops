@@ -3,11 +3,11 @@ Criando uma role com ansible-galaxy
 
 Vamos criar uma `role` usando o comando `ansible-galaxy`, nesse lab vamos utilizar a estrutura inicial fornecida pelo parâmetro `init`, fazer algumas modificações para chegarmos a um resultado que explique toda a estrutura da nova `role`
 
-A primeira coisa que você deve fazer é acessar o diretório para configurar as suas `roles`,  esse diretório é  `/etc/ansible`.
+A primeira coisa que você deve fazer é acessar o diretório para configurar as suas `roles`,  esse diretório é  `/etc/ansible/roles`.
 
 ```css
 
-cd /etc/ansible
+cd /etc/ansible/roles
 
 ```
 
@@ -21,6 +21,7 @@ ansible-galaxy init ./apache --offline
 
 O Segundo parâmetro `./apache` indica o diretório a ser criado com a estrutura da `role` e o terceiro parâmetro `--offline` indica que não queremos que essa `role` seja sincronizada com o site do [Ansibe-Galaxy](https://galaxy.ansible.com/).
 
+
 Após a execuçao do comando a estrutura deve estar criada:
 
 ![tree 1](../images/06-01-01.png)
@@ -32,7 +33,7 @@ Vamos explicar a estrutura de diretórios criada pelo comando:
   * **handlers**: Este diretório é criado para o armazenamento de `handlers` . Os `handlers` são tarefas que podem ser marcadas durante um `play` para serem executadas na conclusão da peça.
   * **meta**: Este diretório é criado para armazenar as informações gerais a respeito da `role` como por exemplo as plataformas suportadas pela `role`
   * **task**: Este diretório irá armazenar as tarefas que sua `role` deverá executar, como as atualizações de pacotes, instalações, configurações ou cópias de arquivos, por exemplo
-  * **templates**: Este diretório poderá armazenar arquivos de `template` que serão utilizados pela `role` geralmente os arquivos são do tipo `.tpl` e são normalmente utilizados para configurar serviços baseados em valores variáveis que podem ser configurados no próprio playbook, em arquivos variáveis incluídos, ou obtidos através de fatos.
+  * **templates**: Este diretório poderá armazenar arquivos de `template` que serão utilizados pela `role` geralmente os arquivos são do tipo `.tpl` e são normalmente utilizados para configurar serviços baseados em valores variáveis que podem ser configurados no próprio playbook, em arquivos variáveis incluídos, ou obtidos através dos `facts`.
   * **tests**: Como o próprio nome indica, o diretório é criado com a estrutura básica de execução de testes
   * **vars**: Este diretório armazenará as variáveis de execução da `role`, como já temos um diretório `default` que contém variáveis padrão, tudo que for informado no diretório `vars` sobrescreverá o conteúdo do diretório `default`
 
@@ -127,9 +128,9 @@ Após esta etapa, precisamos configurar o `handler` que é descrito na cláusula
   service: name=httpd state=restarted
 ```
 
-Agora você pde dar uma olhada nos eu arquivo `meta/main.yml` e alterar alguns dados, como o autor a descrição, etc. VEja que existem outras informações no arquivo que podem ser úteis no caso de termos que publicar essa `role` como a licença, as plataformas suportadas entre outras informações.
+Agora você pde dar uma olhada nos seu arquivo `meta/main.yml` e alterar alguns dados, como o autor a descrição, etc. Veja que existem outras informações no arquivo que podem ser úteis no caso de termos que publicar essa `role` como a licença, as plataformas suportadas entre outras informações.
 
-Com estas alterações nossa role deve estar assim:
+Com estas alterações nossa `role` deve estar assim:
 
 ![tree 2](../images/06-01-02.png)
 

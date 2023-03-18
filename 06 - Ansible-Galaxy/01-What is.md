@@ -22,7 +22,7 @@ Ao longo do curso já exploramos alguns conceitos que fazem parte de uma `collec
 
 **roles**
 --------------------------------------------
-Ansible `roles`são um método de organizar de certas variáveis, tarefas, arquivos, modelos e manipuladores(`handlers`) com base em uma estrutura de arquivos conhecida. O agrupamento de conteúdo por funções permite o fácil compartilhamento e reutilização. A documentação `ansible` sobre funções define a estrutura de diretórios e arquivos.
+Ansible `roles`são um método de organização de certas variáveis, tarefas, arquivos, modelos e manipuladores(`handlers`) com base em uma estrutura de arquivos conhecida. O agrupamento de conteúdo por funções permite o fácil compartilhamento e reutilização. A documentação `ansible` sobre funções define a estrutura de diretórios e arquivos.
 
 Desta forma, uma `role` pode conter um conjunto de instruções estruturadas que devem ser realizadas para executar uma tarefa complexa, uma vez que a `role` foi devidamente codificada, o trabalho do desenvolvedor torna-se extremamente simples.
 
