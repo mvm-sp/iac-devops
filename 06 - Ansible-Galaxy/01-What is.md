@@ -12,11 +12,11 @@ Use o Galaxy para iniciar seu projeto de automação com grande conteúdo da com
 Estrutura de uma collection
 -------------------------------------------------------
 
-Ansible `collections` podem incluir qualquer tipo de plugin disponível dentro do Ansible Core, inclundo `roles`, `playbooks`, etc. Abaixo está um exemplo de estrutura de uma `collections`
+Ansible `collections` podem incluir qualquer tipo de `plugin` disponível dentro do Ansible Core, inclundo `roles`, `playbooks`, etc. Abaixo está um exemplo de estrutura de uma `collections`
 
 ![Colection](images/06-01-05.png)
 
-Como você pode ver, os `playbooks` e `roles` podem ser incluídos na coleção, assim como outros plugins. Todos estes estão disponíveis através do método de `namespacing` . O uso de `namespaces` pela Ansible Collections ajuda a evitar colisões de plugins, módulos, etc., bem como ter cada coleção disponível por seu nome de coleção totalmente qualificado (FQCN). Podemos explorar este conceito na própria [documentação](https://galaxy.ansible.com/docs/contributing/namespaces.html) do `ansible`.
+Como você pode ver, os `playbooks` e `roles` podem ser incluídos na coleção, assim como outros `plugins`. Todos estes estão disponíveis através do método de `namespacing` . O uso de `namespaces` pela Ansible Collections ajuda a evitar colisões de plugins, módulos, etc., bem como ter cada coleção disponível por seu nome de coleção totalmente qualificado (FQCN). Podemos explorar este conceito na própria [documentação](https://galaxy.ansible.com/docs/contributing/namespaces.html) do `ansible`.
 
 Ao longo do curso já exploramos alguns conceitos que fazem parte de uma `collection` como `playbooks` e `modules`, agora vamos explorar mais alguns.
 
