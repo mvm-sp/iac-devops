@@ -66,7 +66,7 @@ Agora vamos iniciar nossa confguração para que esta mesma tarefa seja feita pe
 
 Primeiro você deve preparar os arquivos que farão parte de sua `role`, baseado no que vemos no `playbook` acima, nossa `role`necessitará de um arquivo `httpd.original` e um arquivo `index.html` grave os dois arquivos na pasta `file` dentro do diretório criado pelo `init`, no nosso caso, o diretório `apache`
 
->Dica: você pode verificar o conteúdo do arquivo `httpd.original` em vários repositórios disopníveis na `web`como no repositório da [apache.org](https://svn.apache.org/repos/infra/websites/cms/webgui/conf/httpd.conf), mas recomendams que você utilize o padrão da [AWS](../../Appendix/Ansible/extras/httpd.conf).
+>Dica: você pode verificar o conteúdo do arquivo `httpd.original` em vários repositórios disopníveis na `web`como no repositório da [apache.org](https://svn.apache.org/repos/infra/websites/cms/webgui/conf/httpd.conf), mas recomendamos que você utilize o padrão da [AWS](../../Appendix/Ansible/extras/httpd.conf).
 
 O conteúdo do arquivo `index.html` pode ser o mesmo utlizado em exercícios anteriores como [este](../../04%20-%20Ansible-Playbook/labs/01-lab.md).
 
