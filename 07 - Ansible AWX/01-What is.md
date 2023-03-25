@@ -26,7 +26,7 @@ Cada instalação tem sua particularidade, mas para todas elas será exigido a d
 * Minimo de 20GB de espaço em disco
 * Se você executar em um PostgreSQL separado, a versão minima é 9.6.
 
-De acordo com sua escolha, alguns conhecimentos adicoinais serão requeridos, por exemlo, uma instalação baseada em **Kubernetes**, exigirá um conhecimento básico da sua arquitetura, como a identificação dos _namespaces_, _nodes_, _deployments_, _services_ e _pods_, além da lógica de construção e nível de exposição de cada peça de seu _cluster_.
+De acordo com sua escolha, alguns conhecimentos adicoinais serão requeridos, por exemplo, uma instalação baseada em **Kubernetes**, exigirá um conhecimento básico da sua arquitetura, como a identificação dos _namespaces_, _nodes_, _deployments_, _services_ e _pods_, além da lógica de construção e nível de exposição de cada peça de seu _cluster_.
 
 
 

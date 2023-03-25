@@ -1,7 +1,7 @@
 Instalando o AWX
 =======================================
 
-A primeira tarefa a ser feita é a instalação e configuração de um _cluster_. Vou sugerir que seja utilizado o [k3s](https://docs.k3s.io/quick-start) que é mais leve que é um cluster leve baseado no Kubernetes.
+A primeira tarefa a ser feita é a instalação e configuração de um _cluster_. Vou sugerir que seja utilizado o [k3s](https://docs.k3s.io/quick-start) que é mais leve e baseado no Kubernetes.
 
 Seguindo a documentação, você executará o comando:
 
@@ -19,7 +19,7 @@ Repare que usuários sem elevação de privilégio não tem acesso aos arquivos 
 
 ![Permission](images/07-02-01.png)
 
-Para evitar o desconforto de sempre utilizarmos o `sudo` antes de cada comando para o cluster, vamos alterar a proriedade do arquivo `/etc/rancher/k3s/k3s.yaml`, levando en conta o usuário e gruop que você está logado no terminal, neste caso o usuário (que pode ser obtido pelo comando `whoami`) e o grupo (que pode ser obtido pelo comando `groups`) são `ubuntu:ubuntu`.
+Para evitar o desconforto de sempre utilizarmos o `sudo` antes de cada comando para o cluster, vamos alterar a proriedade do arquivo `/etc/rancher/k3s/k3s.yaml`, levando em conta o usuário e grupo que você está logado no terminal, neste caso o usuário (que pode ser obtido pelo comando `whoami`) e o grupo (que pode ser obtido pelo comando `groups`) são `ubuntu:ubuntu`.
 
 ```css
 sudo chown ubuntu:ubuntu /etc/rancher/k3s/k3s.yaml
@@ -33,6 +33,30 @@ Client Version: version.Info{Major:"1", Minor:"25", GitVersion:"v1.25.7+k3s1", G
 Kustomize Version: v4.5.7
 Server Version: version.Info{Major:"1", Minor:"25", GitVersion:"v1.25.7+k3s1", GitCommit:"f7c20e237d0ad0eae83c1ce60d490da70dbddc0e", GitTreeState:"clean", BuildDate:"2023-03-10T22:16:07Z", GoVersion:"go1.19.6", Compiler:"gc", Platform:"linux/amd64"}
 ```
+Com seu acesso assegurado, pode tentar executar alguns comandos para verificar a saúde de seu _cluster_
+
+```css
+kubectl get nodes
+
+```
+```css
+NAME               STATUS   ROLES                  AGE     VERSION
+ubuntuserver2204   Ready    control-plane,master   3h54m   v1.25.7+k3s1
+```
+
+
+```css
+kubectl get namespaces
+```
+
+```
+NAME              STATUS   AGE
+default           Active   3h59m
+kube-system       Active   3h59m
+kube-public       Active   3h59m
+kube-node-lease   Active   3h59m
+```
+
 
 ### Instalação básica do AWX
 
@@ -52,7 +76,7 @@ curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack
 ```
 >DICA: em alguns cenários sua instância pode apresentar falhas de certificado, para resolver este problema de forma rápida, acrescente a instrução ` --insecure` logo após a URL
 
-verifique se a instalação ocorreu com sucesso verificando o conteúdo da pasta atual :
+verifique se a instalação ocorreu com sucesso dando uma olhada no conteúdo da pasta atual :
 
 Se a instalação ocorreu com sucesso, recomendo que você mova para um diretório que democratize o `kustomize`:
 
@@ -70,26 +94,26 @@ Agora vamos para a configuração, vamos criar um arquivo chamado `kustomization
 
 ```yaml
 apiVersion: kustomize.config.k8s.io/v1beta1
-bondoso: Kustomização
-recursos:
-  # Encontre a última tag aqui: https://github.com/ansible/awx-operator/releases
+kind: Kustomization
+  # Find the latest tag here: https://github.com/ansible/awx-operator/releases
+resources:
   - github.com/ansible/awx-operator/config/default?ref=<tag>
 
-# Definir as etiquetas de imagem para combinar com a versão idiota de cima
-imagens:
-  - nome: cais.io/ansible/awx-operator
+# Set the image tags to match the git version from above
+images:
+  - name: quay.io/ansible/awx-operator
     newTag: <tag>
 
-# Especifique um namespace personalizado no qual instalar o AWX
+# Specify a custom namespace in which to install AWX
 namespace: awx
 ```
->Atenção: você deve substituir a `<tag>` or uma versão válida do repositório, existe um comentário no próprio arquivo orientando a consultar a versão no [github]( https://github.com/ansible/awx-operator/releases)
+>Atenção: você deve substituir a `<tag>` por uma versão válida do repositório, existe um comentário no próprio arquivo orientando a consultar a versão no [github]( https://github.com/ansible/awx-operator/releases)
 
 Para nossa instalação, substituímos a `<tag>` pela versão `1.3.0`.
 
 > **DICA:** Se você precisar alterar alguma das configurações padrão para o operador (como recursos.limites), você pode adicionar [patches](https://kubectl.docs.kubernetes.io/references/kustomize/kustomization/patches/) na parte inferior de seu arquivo kustomization.yaml.
 
-agora execute a primeira construção executando:
+agora execute a primeira construção com o comando `build` e `apply`:
 
 ```css
 $ kustomize build . | kubectl apply -f -
@@ -98,21 +122,21 @@ $ kustomize build . | kubectl apply -f -
 este deverá ser o resultado:
 
 ```
-namespace/awx criado
-customresourcedefinition.apiextensions.k8s.io/awxbackups.awx.ansible.com criado
-customresourcedefinition.apiextensions.k8s.io/awxrestores.awx.ansible.com criado
-customresourcedefinition.apiextensions.k8s.io/awxs.awx.ansible.com criado
-conta-serviço/awx-operador-controlador-gerente criado
-role.rbac.authorization.k8s.io/awx-operator-awx-manager-role criado
-role.rbac.authorization.k8s.io/awx-operator-leader-eleitor-role criado
-clusterrole.rbac.authorization.k8s.io/awx-operator-metrics-reader criado
-clusterrole.rbac.authorization.k8s.io/awx-operator-proxy-role criado
-rolebinding.rbac.authorization.k8s.io/awx-operator-awx-manager-rolebinding criado
-rolebinding.rbac.authorization.k8s.io/awx-operator-leader-eleitor-eleitor-rolebinding criado
-clusterrolebinding.rbac.authorization.k8s.io/awx-operator-proxy-rolebinding criado
-configmap/awx-operator-awx-manager-config criado
-serviço/awx-operador-controlador-gerenciador-serviço métrico criado
-deployment.apps/awx-operator-controller-manager criado
+namespace/awx created
+customresourcedefinition.apiextensions.k8s.io/awxbackups.awx.ansible.com created
+customresourcedefinition.apiextensions.k8s.io/awxrestores.awx.ansible.com created
+customresourcedefinition.apiextensions.k8s.io/awxs.awx.ansible.com created
+serviceaccount/awx-operator-controller-manager created
+role.rbac.authorization.k8s.io/awx-operator-awx-manager-role created
+role.rbac.authorization.k8s.io/awx-operator-leader-election-role created
+clusterrole.rbac.authorization.k8s.io/awx-operator-metrics-reader created
+clusterrole.rbac.authorization.k8s.io/awx-operator-proxy-role created
+rolebinding.rbac.authorization.k8s.io/awx-operator-awx-manager-rolebinding created
+rolebinding.rbac.authorization.k8s.io/awx-operator-leader-election-rolebinding created
+clusterrolebinding.rbac.authorization.k8s.io/awx-operator-proxy-rolebinding created
+configmap/awx-operator-awx-manager-config created
+service/awx-operator-controller-manager-metrics-service created
+deployment.apps/awx-operator-controller-manager created
 ```
 
 Espere um pouco e você deve ter o `awx-operador` funcionando:
@@ -131,7 +155,7 @@ awx-operator-controller-manager-66ccd8f997-rhd4z   2/2     Running   0          
 Vamos evitar a repetição do comando `-n awx'` configurando o contexto:
 
 ```
-$ kubectl config set-context --current --namespace=awx
+$ sudo kubectl config set-context --current --namespace=awx
 ```
 
 Em seguida, crie um arquivo chamado `awx.yaml` na mesma pasta com o conteúdo sugerido abaixo. O `metadata.name` que você fornecer será o nome da implantação AWX resultante.
@@ -140,7 +164,6 @@ Em seguida, crie um arquivo chamado `awx.yaml` na mesma pasta com o conteúdo su
 
 ```yaml
 ---
-awx.yaml---
 apiVersion: awx.ansible.com/v1beta1
 kind: AWX
 metadata:
@@ -150,17 +173,17 @@ spec:
   nodeport_port: 30080
 ```
 
-> Pode fazer sentido criar e especificar sua própria `secret` para implantação, de modo que, se o segredo k8s for apagado, ele possa ser recriado, se necessário.  Se não for fornecida, uma será gerada automaticamente, mas não poderá ser recuperada se perdida. Leia mais [aqui]([#secret-key-configuration](https://github.com/ansible/awx-operator#secret-key-configuration)).
+> Pode fazer sentido criar e especificar sua própria `secret` para implantação, de modo que, se o segredo k8s for apagado, ele possa ser recriado, se necessário.  Se não for fornecida, uma será gerada automaticamente, mas não poderá ser recuperada se perdida. Leia mais [aqui](https://github.com/ansible/awx-operator#secret-key-configuration).
 
 
-Se você estiver em Openshift, você pode aproveitar as Rotas especificando as seguintes especificações. Isto criará automaticamente uma Rota para você com um nome de hostname personalizado. Isto pode ser encontrado na seção Rota do Openshift Console.
+Se você estiver em Openshift, você pode aproveitar as Rotas especificando os seguintes parâmetros. Isto criará automaticamente uma Rota para você com um nome de hostname personalizado. Isto pode ser encontrado na seção Rota do Openshift Console.
 
 ```yaml
 ---
 apiVersion: awx.ansible.com/v1beta1
 kind: AWX
 metadata:
-  name: awx-demo
+  name: awx
 spec:
   service_type: clusterip
   ingress_type: Route
@@ -178,7 +201,7 @@ Certifique-se de adicionar este novo arquivo à lista de "recursos" em seu arqui
 ...
 ```
 
-Finalmente, execute `kustomize` novamente para criar a instância AWX em seu conjunto:
+Finalmente, execute `kustomize` novamente para criar a instância AWX em seu _cluster_:
 
 ```
 kustomize build . | kubectl apply -f -
@@ -196,7 +219,7 @@ PLAY RECAP *********************************************************************
 localhost                  : ok=78   changed=0    unreachable=0    failed=0    skipped=80   rescued=0    ignored=1
 ```
 
-Ao funal do _build_ confira o resultado observando os _pods_ criados:
+Ao final do _build_ confira o resultado observando os _pods_ criados:
 
 ```
 kubectl get pods
@@ -215,14 +238,14 @@ Agora é a parte final, você vai acessar o seu console AWX, para isso você dev
 
 ![IP](images/07-02-02.png)
 
-E acessar sua instância pelo browser:
+E acessar sua instância pelo browser utilizando o IP e a porta que foi configurada no arquivo `awx.yaml`:
 
 ![site](images/07-02-03.png)
 
 para resgatar a senha de sua instalação, acesse as chaves do seu cluster. Por padrão, o usuário administrador é `admin` e a senha está disponível no segredo `<resourcename>-admin-password`. Para recuperar a senha de administrador, execute:
 
 ```css
-$ kubectl get secret awx-admin-password -o jsonpath="{.data.password}" | base64 --decódigo; echo yDL2Cx5Za94g9MvBP6B73nzVLlmfgPjR
+kubectl get secret awx-admin-password -o jsonpath="{.data.password}" | base64 --decode ; echo yDL2Cx5Za94g9MvBP6B73nzVLlmfgPjR
 ```
 
 ![pass](images/07-02-04.png)
