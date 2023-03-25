@@ -1,5 +1,8 @@
 Instalando o AWX
 =======================================
+Antes de iniciar, é importante que você tenha uma instância linux em execução e que você recupere a informção do endereço IP que, geralmente, é fornecida no script de inicialização, como no caso do `VirtualBox`
+
+![init](images/07-02-02.png)
 
 A primeira tarefa a ser feita é a instalação e configuração de um _cluster_. Vou sugerir que seja utilizado o [k3s](https://docs.k3s.io/quick-start) que é mais leve e baseado no Kubernetes.
 
@@ -39,17 +42,17 @@ Com seu acesso assegurado, pode tentar executar alguns comandos para verificar a
 kubectl get nodes
 
 ```
+
 ```css
 NAME               STATUS   ROLES                  AGE     VERSION
 ubuntuserver2204   Ready    control-plane,master   3h54m   v1.25.7+k3s1
 ```
 
-
 ```css
 kubectl get namespaces
 ```
 
-```
+```css
 NAME              STATUS   AGE
 default           Active   3h59m
 kube-system       Active   3h59m
