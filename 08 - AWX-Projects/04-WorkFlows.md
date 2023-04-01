@@ -5,7 +5,7 @@ Configurando WorkFlows no Ansible AWX
 
 Os `Job Templates` ou `workflow` são ligados entre si usando uma estrutura tipo gráfico chamada nós. Estes nós podem ser trabalhos, sincronia de projetos ou sincronia de inventários. Um modelo pode fazer parte de diferentes fluxos de trabalho ou ser usado várias vezes no mesmo `workflow`. Uma cópia da estrutura gráfica é salva em um  `workflow` quando ele se inicia.
 
-Vamos criar um `Workflow` simples. Vá até o seu repositório de git que estamos usando para nosso `Projeto` e adicione mais 2 arquivos, o primeiro é o `awx-hello.yml`.
+Vamos criar um `Workflow` simples. Vá até o seu repositório de git que estamos usando para nosso `Projeto` e adicione mais 2 arquivos, o primeiro é o `awx-hello-world.yml`.
 
 ```yaml
 - name: Hello World Sample
@@ -50,7 +50,7 @@ Agora vamos adicionar um projeto do tipo `Workflow` vá até o menu de projetos,
 
 ![image](images/08-04-02.png)
 
-Preencha os dados básicos, e salve o seu `workflow`, no róximo passo vamos acessar as configurações dos passos de execução dele chamamos cada passo de `node`. Repare que para esse teste `NÃO UTILIZAREMOS NENHUM INVENTÁRIO`
+Preencha os dados básicos, e salve o seu `workflow`, na próxima etapa vamos acessar as configurações dos passos de execução dele, chamamos cada passo de `node`. Repare que para esse teste `NÃO UTILIZAREMOS NENHUM INVENTÁRIO`
 
 ![image](images/08-04-03.png)
 
@@ -128,7 +128,7 @@ localhost                  : ok=1    changed=0    unreachable=0    failed=1    s
 
 Opa, tem uma dica boa nesse log, aqui diz que o job falhou porque depende de uma variável que não foi encontrada na linha 5 do arquivo `awx-hello.yml`
 
-Analisando o Arquivo, podemos ver que próximo a linha mencionada háa instrução 
+Analisando o Arquivo, podemos ver que próximo a linha mencionada há a instrução 
 
 ```css 
 msg: "{{ hello_msg }}" 
