@@ -32,7 +32,7 @@ No nosso cenário trabalhamos com a `AWS` para nossos estudos, portanto você pr
 Inventários
 ------------------------------------------------
 
-Os inventários são grupos de servidores anfitriões que são gerenciados pela Ansible AWX. Os inventários permitem a criação de um grupo com vários servidores host nele. E facilita a gestão de diferentes servidores com ambientes diferentes.
+Os inventários são grupos de servidores `hosts` que são gerenciados pela Ansible AWX. Os inventários permitem a criação de um grupo com vários servidores host nele. E facilita a gestão de diferentes servidores com ambientes diferentes.
 
 Para gerenciar e fornecer servidores, devemos criar um novo grupo de inventário e depois adicionar hosts de servidores a esse grupo de inventário.
 
