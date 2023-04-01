@@ -248,8 +248,7 @@ E acessar sua instância pelo browser utilizando o IP e a porta que foi configur
 para resgatar a senha de sua instalação, acesse as chaves do seu cluster. Por padrão, o usuário administrador é `admin` e a senha está disponível no segredo `<resourcename>-admin-password`. Para recuperar a senha de administrador, execute:
 
 ```css
-$ kubectl get secret awx-demo-admin-password -o jsonpath="{.data.password}" | base64 --decode ; echo
-yDL2Cx5Za94g9MvBP6B73nzVLlmfgPjR
+$ kubectl get secret awx-admin-password -o jsonpath="{.data.password}" | base64 --decode ; echo
 ```
 
 ![pass](images/07-02-04.png)
