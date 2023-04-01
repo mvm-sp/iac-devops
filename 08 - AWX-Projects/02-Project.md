@@ -12,7 +12,7 @@ Crie um novo projeto e acrescente na raiz deste projeto o arquivo `ping.yml`.
     - all
   tasks:
     - name: Example from an Ansible Playbook
-      ansible.builtin.ping
+      ansible.builtin.ping:
 ```
 
 Agora copie a URL de seu projeto:
