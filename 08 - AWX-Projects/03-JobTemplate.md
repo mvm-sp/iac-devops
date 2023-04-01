@@ -7,7 +7,7 @@ Vá até o menu `Templates` a clique no botão `add`
 
 ![image](images/08-03-01.png)
 
-Você verá que é aqui que tudo se encaixa, preencha os dados de seu template, perceba que este cadastro irá exigir dados que configuramos nos passos anteriores como o `Inventário` que será utilizado, o Projeto onde estão os playbooks, as `Credenciais` necessárias para a execução do projeto e qual é o `Playbook` que desejamos executar.
+Você verá que é aqui que tudo se encaixa, preencha os dados de seu template, perceba que este cadastro irá exigir dados que configuramos nos passos anteriores como o `Inventário` que será utilizado, o `Projeto` onde estão os playbooks, as `Credenciais` necessárias para a execução do projeto e qual é o `Playbook` que desejamos executar.
 
 ![image](images/08-03-02.png)
 
@@ -15,7 +15,7 @@ Depois de concluir o cadastro você poderá solicitar a execução de seu `templ
 
 ![image](images/08-03-03.png)
 
-Acompanhe a exeecução em sua lista de `jobs`
+Acompanhe a execução em sua lista de `jobs`
 
 ![image](images/08-03-04.png)
 
