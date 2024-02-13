@@ -25,6 +25,7 @@ As ferramentas de gerenciamento de configuração e automação do Server em ger
 *   Crossplane
 *   Vagrant
 *   Pulumi
+*   OpenTofu
 
 O Ansible Automation Platform pode ser usado para provisionar sistemas operacionais e dispositivos de rede, implantar aplicações e gerenciar configurações.
 
