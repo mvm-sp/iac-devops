@@ -6,7 +6,7 @@ YAML (pronuncia-se "yaamel") é um formato direto de serialização de dados pro
 
  YAML foi proposto por Brian Ingerson \<<briani@ActiveState.com>\>, Clark C. Evans e Oren Ben-Kiki \<<oren@ben-kiki.org>\> em 2001 
 
-YAML é um acrónimo recursivo que significa "YAML Ain't Markup Language" (em português, "YAML não é linguagem de marcação"). No início do seu desenvolvimento YAML significava "Yet Another Markup Language" ("Mais outra linguagem de marcação") para distinguir seu propósito centrado em dados no lugar de documentos marcados. Como é usado frequentemente XML para serialização de dados sendo este uma autêntica linguagem de marcação de documentos, é razoável considerar o YAML como uma linguagem baseada em formatação rápida.
+YAML é um acrônimo recursivo que significa "YAML Ain't Markup Language" (em português, "YAML não é linguagem de marcação"). No início do seu desenvolvimento YAML significava "Yet Another Markup Language" ("Mais outra linguagem de marcação") para distinguir seu propósito centrado em dados no lugar de documentos marcados. Como é usado frequentemente XML para serialização de dados sendo este uma autêntica linguagem de marcação de documentos, é razoável considerar o YAML como uma linguagem baseada em formatação rápida.
 
 A sintaxe do YAML é baseada em indentação e utiliza uma estrutura hierárquica para representar os dados. O YAML possui três tipos de estruturas de dados principais:
 
