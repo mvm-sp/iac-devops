@@ -95,7 +95,15 @@ jobs:
           molecule_working_dir: ${{ github.repository }}
         env:
           PY_COLORS: '1'
-          ANSIBLE_FORCE_COLOR: '1'"          
+          ANSIBLE_FORCE_COLOR: '1'
+      - name: Run Molecule tests.
+        run: molecule -verbose test
+        env:
+          PY_COLORS: '1'
+          ANSIBLE_FORCE_COLOR: '1'
+          MOLECULE_DISTRO: ${{ matrix.distro }}
+        working-directory: "${{ github.repository }}"          
+
 ```
 
 Faça o `push` de sua aplicação, sua pipeline já será disparada e, provavelmente, apresentará algum erro
