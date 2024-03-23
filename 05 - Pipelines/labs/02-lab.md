@@ -63,11 +63,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        scenario:
-          - ubuntu-20.04
+        scenario: ubuntu-20.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           path: "${{ github.repository }}"
 
@@ -87,23 +86,16 @@ jobs:
 
       - name: Install ansible-lint.
         run: pip3 install ansible-lint                     
-
+ 
       - name: Molecule
-        uses: gofrolist/molecule-action@v1
+        uses: gofrolist/molecule-action@v2
         with:
-          molecule_options: --debug --base-config molecule/_shared/base.yml
+          molecule_options: --debug --base-config ../../tests/molecule/base.yml
           molecule_command: test
-          molecule_args: --scenario-name ${{ matrix.scenario }}
-          molecule_working_dir: "${{ github.repository }}"
-        env:
-          ANSIBLE_FORCE_COLOR: '1'
-      - name: Run Molecule tests.
-        run: molecule -verbose test
+          molecule_working_dir: ${{ github.repository }}
         env:
           PY_COLORS: '1'
-          ANSIBLE_FORCE_COLOR: '1'
-          MOLECULE_DISTRO: ${{ matrix.distro }}
-        working-directory: "${{ github.repository }}"          
+          ANSIBLE_FORCE_COLOR: '1'"          
 ```
 
 Faça o `push` de sua aplicação, sua pipeline já será disparada e, provavelmente, apresentará algum erro
