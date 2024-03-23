@@ -63,7 +63,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        scenario: ubuntu-20.04
+        scenario: 
+        - ubuntu-20.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
