@@ -67,7 +67,7 @@ Agora vamos iniciar nossa confguração para que esta mesma tarefa seja feita pe
 
 Primeiro você deve preparar os arquivos que farão parte de sua `role`, baseado no que vemos no `playbook` acima, nossa `role`necessitará de um arquivo `httpd.original` e um arquivo `index.html` grave os dois arquivos na pasta `file` dentro do diretório criado pelo `init`, no nosso caso, o diretório `apache`
 
->Dica: você pode verificar o conteúdo do arquivo `httpd.original` em vários repositórios disopníveis na `web`como no repositório da [apache.org](https://svn.apache.org/repos/infra/websites/cms/webgui/conf/httpd.conf), mas recomendamos que você utilize o padrão da [AWS](../../Appendix/Ansible/extras/httpd.conf).
+>Dica: você pode verificar o conteúdo do arquivo `httpd.original` em vários repositórios disopníveis na `web`como no repositório da [apache.org](https://svn.apache.org/repos/infra/websites/cms/webgui/conf/httpd.conf), mas recomendamos que você utilize o padrão da [AWS](../../Appendix/Ansible/extras/httpd.conf) ou para [Ubuntu](../../Appendix/Ansible/extras/apache2.conf).
 
 O conteúdo do arquivo `index.html` pode ser o mesmo utlizado em exercícios anteriores como [este](../../04%20-%20Ansible-Playbook/labs/01-lab.md).
 
@@ -82,6 +82,17 @@ Vamos criar 3 arquivos distintos no nosso diretório `task`.
 - name: Install http Package
   yum: name=httpd state=latest
 ```
+ou para Ubuntu
+
+
+```yaml
+---
+- name: Install http Package
+  package:
+    name: apache2
+    state: present
+```
+
 
 **task/configure.yml**
 
@@ -95,6 +106,18 @@ Vamos criar 3 arquivos distintos no nosso diretório `task`.
   - restart apache
 ```
 
+ou para Ubuntu
+
+```yaml
+---
+- name: Copy httpd configuration file
+  copy: src=files/httpd.original dest=/etc/apache2/apache2.conf
+- name: Copy index.html file
+  copy: src=files/index.html dest=/var/www/html/index.html
+  notify:
+  - restart apache
+```
+
 **task/start.yml**
 
 ```yaml
@@ -102,6 +125,15 @@ Vamos criar 3 arquivos distintos no nosso diretório `task`.
 - name: Start and enable httpd service
   service: name=httpd state=restarted enabled=yes
 ```
+
+ou para Ubuntu
+
+```yaml
+---
+- name: Start and enable httpd service
+  service: name=apache2 state=restarted enabled=yes
+```
+
 
 Com nossos 3 arquivos de tarefas criados, vamos configurar o nosso `tasks/main.yml` importanto todas as tarefas na ordem que elas precisam ser executadas:
 
@@ -126,6 +158,14 @@ Após esta etapa, precisamos configurar o `handler` que é descrito na cláusula
 # handlers file for ./apache
 - name: restart apache
   service: name=httpd state=restarted
+```
+ou para Ubuntu
+
+```yaml
+---
+# handlers file for ./apache
+- name: restart apache
+  service: name=apache2 state=restarted
 ```
 
 Agora você pde dar uma olhada nos seu arquivo `meta/main.yml` e alterar alguns dados, como o autor a descrição, etc. Veja que existem outras informações no arquivo que podem ser úteis no caso de termos que publicar essa `role` como a licença, as plataformas suportadas entre outras informações.
