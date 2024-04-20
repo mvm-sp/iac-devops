@@ -62,7 +62,7 @@ Seu worflow já tem o primeiro `node`
 
 ![image](images/08-04-06.png)
 
-En seguida vamos adicionar um `node` de aprovação, ele fará com que seu `workflow` aguarde uma decisão de um aprovador para direcionar o restante da execução:
+Em seguida vamos adicionar um `node` de aprovação, ele fará com que seu `workflow` aguarde uma decisão de um aprovador para direcionar o restante da execução:
 
 
 ![image](images/08-04-07.png)
@@ -91,7 +91,7 @@ Nosso `workflow` está assim
 
 ![image](images/08-04-13.png)
 
-Execute o seu workflow, repare que após asincronização do repositório seu fluxo está parado na etapa de aprovação:
+Execute o seu workflow, repare que após a sincronização do repositório seu fluxo está parado na etapa de aprovação:
 
 ![image](images/08-04-14.png)
 

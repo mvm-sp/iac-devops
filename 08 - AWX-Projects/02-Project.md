@@ -25,7 +25,7 @@ Retorne até o `Ansible AWX` e vá até o menu `Projects`, clique no botão `add
 
 Faça a configuração de seu projeto com os dados que o identifiquem, selecione `Source Control Credential Type`do tipo `Git` e cole sua `URL` copiada no campo `Source Control URL` como na imagem acima.
 
->ATENÇÃO: Repare que o campo `Source Control Credential` não está preenchido, isso porque o nosso repositório é público. Caso você trabalhe com repositórios privados, será necessária a criação de uma credencal para acessá-o.
+>ATENÇÃO: Repare que o campo `Source Control Credential` não está preenchido, isso porque o nosso repositório é público. Caso você trabalhe com repositórios privados, será necessária a criação de uma credential para acessá-o.
 
 Após salvar suas configurações você poderá solicitar que o Ansible AWX sincronize as informações a partir de seu repositório, basta clicar no ícone para sincronizar:
 
