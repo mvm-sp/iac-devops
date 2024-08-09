@@ -13,7 +13,7 @@ A partir dessa divisão, os projetos devem seguir caminhos independentes, a comu
 *   Integração com outras ferramentas de Infrastructure as code.
 *   Possui seu proprio repositório de módulos (Registry)
 
-### Quando e porque eu utilizaria o Pulumi
+### Quando e porque eu utilizaria o OpenToFu
 Como o OpenTofu foi concebido a partir do conceito do [Terraform](/02%20-%20Tools/02-1-05%20Terraform.md) suas recomendações são, basicamente, as mesmas. Como trata-se de um projeto recente, suas evoluções poderão sugerir aplicações diferentes de seu "projeto pai", a conferir.
 
 _fonte_ : _https://opentofu.org/docs/intro/_
