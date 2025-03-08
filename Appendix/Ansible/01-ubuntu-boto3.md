@@ -58,6 +58,15 @@ Instale Boto, Boto3 e Ansible. A instalação é realizada por meio de uma linha
 sudo pip3 install boto boto3 ansible
 
 ```
+
+Para as novas versões do python o gerenciador de pacotes pip3 foi atualizado para o pipx, dessa forma, a sequencia de comandos seria:
+```console
+
+apt install pipx
+pipx install <some-python-application>
+
+```
+
 ![Captura de tela do prompt de boto.](images/ansible-00-02.png)
 
 
