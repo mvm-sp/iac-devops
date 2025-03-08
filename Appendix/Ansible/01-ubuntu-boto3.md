@@ -62,8 +62,8 @@ sudo pip3 install boto boto3 ansible
 Para as novas versões do python o gerenciador de pacotes pip3 foi atualizado para o pipx, dessa forma, a sequencia de comandos seria:
 ```console
 
-apt install pipx
-pipx install <some-python-application>
+sudo apt install pipx
+sudo pipx install <some-python-application>
 
 ```
 
