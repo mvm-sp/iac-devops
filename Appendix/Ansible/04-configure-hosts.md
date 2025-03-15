@@ -166,12 +166,15 @@ ao exibir o conteúdo do diretório, certifique-se de que exista apenas o arquiv
 
 Acesse o diretório `.ssh` execute o comando `ssh-keygen` 
 
+Como existem versões de sistema operacional que necessitarão de maiores detalhes no momento de geração da chave `ssh`, recomendamos nesses casos uma execução do comando que especifíca cada parâmertro:
+
 ```console
 
 cd .ssh
-ssh-keygen
+ssh-keygen -t rsa -f id_rsa -q -P ""
 
 ```
+
 ![Captura de tela ssh-keygen execute](images/ansible-04-01.png)
 
 Após a execução, você poderá notar que alguns arquivos foram gerados no diretório `.ssh`
