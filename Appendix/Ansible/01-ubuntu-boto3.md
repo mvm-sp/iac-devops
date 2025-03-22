@@ -44,7 +44,7 @@ sudo apt upgrade
 
 sudo apt install python3 
 
-sudo apt install python-pip3 ou sudo apt-get install -y python3-pip
+sudo apt install python3-pip -y ou sudo apt-get install -y python3-pip
 
 ```
 
