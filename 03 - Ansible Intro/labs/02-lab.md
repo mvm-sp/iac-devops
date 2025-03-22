@@ -23,7 +23,7 @@ Assim você terá que instalar o pacote `nginx` que é um serviço HTTP disponí
 
 ```console
 
-ansible all -i hosts -m shell -a 'yum install nginx' --become
+ansible all -i hosts -m shell -a 'yum install nginx -y' --become
 
 ```
 
