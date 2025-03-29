@@ -46,6 +46,23 @@ Verifique a estrutura criada pelo `molecule`
 
 ![tree](../images/05-01-02.png)
 
+* O `create.yml` é um arquivo de playbook usado para criar as instâncias e armazenar dados no `instance-config`.
+* O `destroy.yml` contém o código do Ansible para destruir as instâncias e removê-las do `instance-config`.
+* O `molecule.yml` é o ponto de entrada central de configuração do Molecule por cenário. Com esse arquivo, você pode configurar cada ferramenta que o Molecule empregará ao testar sua função.
+* O `converge.yml` é o arquivo de playbook que contém a chamada para sua função. O Molecule invocará esse playbook com o `ansible-playbook` e o executará em uma instância criada pelo driver.
+
+
+*** Analisando o arquivo molecule.yml
+
+O `molecule.yml` serve para configurar o Molecule. É um arquivo [YAML] (https://yaml.org/) com chaves que representam os componentes de alto nível que o Molecule fornece. Esses são:
+
+**The** [**dependency**](https://ansible.readthedocs.io/projects/molecule/configuration/#dependency) **manager:** O Molecule usa o [galaxy development guide](https://docs.ansible.com/ansible/latest/galaxy/dev_guide.html) por padrão para resolver suas dependências de função.
+**The** [**platforms**](https://ansible.readthedocs.io/projects/molecule/configuration/#platforms) **definitions:** O Molecule se baseia nisso para saber quais instâncias criar e nomear e a qual grupo cada instância pertence. Se você precisar testar sua função em várias distribuições populares ([CentOS](https://developers.redhat.com/products/rhel/centos-and-rhel), Fedora, Debian, [Red Hat Enterprise Linux](https://developers.redhat.com/products/rhel/overview)), poderá especificar isso nesta seção.
+* **O** [**provisionador**](https://ansible.readthedocs.io/projects/molecule/configuration/#provisioner)**:** O Molecule fornece apenas um provisionador Ansible. O Ansible gerencia o ciclo de vida da instância com base nessa configuração.
+**A** [**cenario**](https://ansible.readthedocs.io/projects/molecule/configuration/#scenario) **definição:** O Molecule depende dessa configuração para controlar a ordem da sequência do cenário.
+* **The** [**verifier**](https://ansible.readthedocs.io/projects/molecule/configuration/#verifier) **framework:** O Molecule usa o Ansible por padrão para fornecer uma maneira de escrever testes específicos de verificação de estado (como _smoke tests_ de implementação) na instância de destino.
+
+
 Altere a estrutura do seu arquivo molecule/default/converge.yml para adequar-se ao nosso cenário
 
 ```yaml
