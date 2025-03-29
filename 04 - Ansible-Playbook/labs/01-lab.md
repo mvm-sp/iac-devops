@@ -1,4 +1,4 @@
-Criando uma instância EC2 (AWS) e serviço NGINX personalzado
+Criando uma instância EC2 (AWS) e serviço NGINX personalizado
 ==========================================================================================================================================
 
 Para este exercício você deverá ter concluído a instalação de uma instância `EC2` explicada no apêndice de exemplos [Playbook Create Instance](../../Appendix/Ansible/02-create-instance.md) 
