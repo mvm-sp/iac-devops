@@ -77,4 +77,4 @@ Agora vamos aplicar o playbook de configuração do nginx para essa nova instân
 
 ```
 
-Este exemplo deve ser efeivo para as imagens fornecidas pela AWS `Amazon Linux 2 AMI`, para outras imagens e distribuiçoes, faça as adequações necessárias. Um exemplo seria alterar o caminho e nome do arquivo inicial para `/var/www/html/index.nginx-debian.html` en distribuições ubuntu.
+Este exemplo deve ser efeivo para as imagens fornecidas pela AWS `Amazon Linux 2 AMI`, para outras imagens e distribuiçoes, faça as adequações necessárias. Um exemplo seria alterar o caminho e nome do arquivo inicial para `/var/www/html/index.nginx-debian.html` em distribuições ubuntu.
