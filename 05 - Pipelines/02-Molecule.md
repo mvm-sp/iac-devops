@@ -47,6 +47,7 @@ Sua instalação apresentará os novos pacotes sendo instalados, como ocorreu co
 
 ![Installing lint](images/05-02-03.png)
 
+
 A partir deste ponto, já podemos utilizar o `molecule` para testar nossos playbooks.
 
 Vamos utilizar o [lab](labs/01-lab.md) para este exercício:

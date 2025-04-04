@@ -187,7 +187,7 @@ Agora você já pode gerar um `playbook` simples que irá executar a sua `role`:
 Crie o seu arquivo de `hosts` para configurar os servidores que receberão sua `role` e execute o `playbook` como `root`.
 
 ```css
-ansible-playbook -i hosts apache_role.yml -u root
+ansible-playbook -i hosts apache_role.yml --become
 ```
 
 Sua `role` será executada através do `playbook` que você acabou de configurar:
