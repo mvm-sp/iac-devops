@@ -168,7 +168,7 @@ ou para Ubuntu
   service: name=apache2 state=restarted
 ```
 
-Agora você pode dar uma olhada nos seu arquivo `meta/main.yml` e alterar alguns dados, como o autor a descrição, etc. Veja que existem outras informações no arquivo que podem ser úteis no caso de termos que publicar essa `role` como a licença, as plataformas suportadas entre outras informações.
+Agora você pode dar uma olhada no seu arquivo `meta/main.yml` e alterar alguns dados, como o autor a descrição, etc. Veja que existem outras informações no arquivo que podem ser úteis no caso de termos que publicar essa `role` como a licença, as plataformas suportadas entre outras informações.
 
 Com estas alterações nossa `role` deve estar assim:
 
