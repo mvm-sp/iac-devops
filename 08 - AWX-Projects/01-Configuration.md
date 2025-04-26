@@ -29,6 +29,10 @@ No nosso cenário trabalhamos com a `AWS` para nossos estudos, portanto você pr
 
 ![image](images/08-01-05.png)
 
+Obtenha suas credenciais da AWS e registre os valores nos campos `Access Key` e `Secret Key`.
+
+![image](images/08-01-13.png)
+
 Inventários
 ------------------------------------------------
 
