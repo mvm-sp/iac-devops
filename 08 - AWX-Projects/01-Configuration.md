@@ -19,7 +19,7 @@ Agora digite as credenciais `NAME` e `DESCRIPTION`, depois especifique o 'TIPO C
 
 Simplesmente, a credencial `Machine` permitirá que você use a autenticação SSH para gerenciar servidores. Seu suporte tanto para autenticação por senha quanto por chave.
 
-Para este guia, estaremos usando a autenticação baseada em chaves. Portanto, digite o nome de usuário e cole as chaves privadas para esse usuário.
+Para este guia, usaremos a autenticação baseada em chaves. Portanto, digite o nome de usuário e cole as **`chaves privadas`** para esse usuário.
 
 ![image](images/08-01-03.png)
 
